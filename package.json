@@ -14,5 +14,10 @@
     "morgan": "~1.7.0",
     "nunjucks": "^3.0.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sass": "^3.0.0"
   }
 }
