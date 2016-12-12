@@ -7,7 +7,8 @@ body {
   line-height: 1.4em; }
 
 .container {
-  width: 1170px; }
+  width: 1170px;
+}
 
 .container {
   margin-right: auto;
@@ -58,6 +59,28 @@ the menu bar has a left part and a right part
 }
 
 
+.social-link-item svg {
+  width: 20px;
+  height: 20px;
+}
+.social-link-item svg {
+  width: 21px;
+  height: 21px;
+  margin-top: 4px;
+}
+
+
+.social-link-item.twitter svg {
+  width: 22px;
+  height: 14px;
+}
+.social-link-item.twitter a svg {
+  fill: #fff;
+}
+.social-link-item.twitter a svg:hover {
+  fill: #0076cc;
+}
+
 .user-link-list {
   padding:0;
   margin:0;
@@ -86,3 +109,38 @@ the menu bar has a left part and a right part
 }
 
 /* style for the main menu bar */
+.header-search {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative !important;
+  height: 50px;
+  margin-bottom: -82px;
+  margin-top: 32px;
+  text-align: right;
+}
+
+.header-search-form {
+  display: inline-block;
+  margin-top: 5px;
+  width: auto;
+  height: 40px;
+  top: -5px;
+}
+
+.header-nav {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative !important;
+  height: 50px;
+  margin-top: 32px;
+}
+
+.nav-logo{
+  display: inline-block;
+  margin-right:22px;
+
+}
+
+.nav-menu-container {
+  display: inline-block;
+}
