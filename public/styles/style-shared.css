@@ -1,191 +1,202 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.4em; }
-
-.container {
-  width: 1170px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.4em;
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+    width: 1170px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /**
 style for header. we assume the header has two part: header-line and menu bar.
 the menu bar has a left part and a right part
 **/
 .header {
-  background-color: transparent;
-  color: #212121;
+    background-color: transparent;
+    color: #212121;
 }
 
 .header-line {
-  position: relative;
-  z-index: 1;
-  min-height: 40px;
-  padding: 11px 0 10px;
-  background-color: #2b383e;
-  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
-  color:white;
+    position: relative;
+    z-index: 1;
+    min-height: 40px;
+    padding: 11px 0 10px;
+    background-color: #2b383e;
+    -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
+    color: white;
 }
 
 .social-link-list {
-  padding:0;
-  margin:0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .social-link-list .social-link-item {
-  display: inline-block;
-  margin-right: 1.538em;
-  text-align: center;
-  font-size: 1.154em;
+    display: inline-block;
+    margin-right: 1.538em;
+    text-align: center;
+    font-size: 1.154em;
 }
 
-.social-link-item  a {
-  color:white;
+.social-link-item a {
+    color: white;
 }
 
 .social-link-item a:hover {
-  color: #337ab7;
+    color: #337ab7;
 }
-
 
 .social-link-item svg {
-  width: 20px;
-  height: 20px;
-}
-.social-link-item svg {
-  width: 21px;
-  height: 21px;
-  margin-top: 4px;
+    width: 20px;
+    height: 20px;
 }
 
+.social-link-item svg {
+    width: 21px;
+    height: 21px;
+    margin-top: 4px;
+}
 
 .social-link-item.twitter svg {
-  width: 22px;
-  height: 14px;
+    width: 22px;
+    height: 14px;
 }
+
 .social-link-item.twitter a svg {
-  fill: #fff;
+    fill: #fff;
 }
+
 .social-link-item.twitter a svg:hover {
-  fill: #0076cc;
+    fill: #0076cc;
 }
 
 .user-link-list {
-  padding:0;
-  margin:0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.user-link-list  .user-link-item {
-  display: inline-block;
-  margin-left: 1em;
-  list-style: none;
-  text-transform: uppercase;
-  font-size: 0.846em;
+.user-link-list .user-link-item {
+    display: inline-block;
+    margin-left: 1em;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 0.846em;
 
 }
 
 .user-link-item a {
-  color: white;
+    color: white;
 }
 
 .user-link-list .user-links__item--separate {
-  margin-left: 3em;
+    margin-left: 3em;
 }
 
 .header-line a {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* style for the main menu bar */
 .header-search {
-  margin-right: auto;
-  margin-left: auto;
-  height: 50px;
-  margin-bottom: -82px;
-  margin-top: 32px;
-  text-align: right;
-  font-size: 1.154em;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    margin-bottom: -82px;
+    margin-top: 32px;
+    text-align: right;
+    font-size: 1.154em;
 }
 
 .header-search-form {
-  display: inline-block;
-  width: auto;
-  vertical-align: top;
+    display: inline-block;
+    width: auto;
+    margin:0;
 }
 
 .header-search-form input {
-  border-bottom: #e3e3e3;
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    vertical-align: top;
+    color:#636363;
+}
+
+.header-search-form input:focus {
+    outline: none;
 }
 
 .header-search-form button {
-  border: 0px none #FFF;
-  box-sizing: border-box;
-  color: #FFF;
-  cursor: pointer;
-  display: inline-block;
-  height: 40px;
-  list-style: outside none none;
-  margin: 0px;
-  outline: 0px none #FFF;
-  padding: 12px 14px;
-  background-color: transparent;
+    border: 0px none #FFF;
+    box-sizing: border-box;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    list-style: outside none none;
+    margin: -10px 0;
+    outline: 0px none #FFF;
+    padding: 12px 14px;
+    background-color: transparent;
 }
 
 .header-search-form button svg {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 .header-nav {
-  margin-right: auto;
-  margin-left: auto;
-  height: 50px;
-  margin-top: 32px;
-  font-size: 1.154em;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    margin-top: 32px;
+    font-size: 1.154em;
 }
 
-.nav-logo{
-  display: inline-block;
-  margin-right:22px;
+.nav-logo {
+    display: inline-block;
+    margin-right: 22px;
 
 }
 
 .nav-menu-container {
-  display: inline-block;
+    display: inline-block;
 }
 
 .nav-menu-list {
-  list-style: none;
+    list-style: none;
 }
 
 .nav-menu-item {
-  display: inline-block;
-  text-transform: uppercase;
-  padding-right:10px;
+    display: inline-block;
+    text-transform: uppercase;
+    padding-right: 10px;
 }
 
 .nav-menu-item svg {
-  width: 15px;
-  height: 15px;
+    width: 15px;
+    height: 15px;
 }
 
 .nav-menu-item a {
-  color:#212121;
+    color: #212121;
 }
-.nav-menu-item a:hover{
-  color:#0076cc;
-  text-decoration: none;
-  cursor: pointer ;
+
+.nav-menu-item a:hover {
+    color: #0076cc;
+    text-decoration: none;
+    cursor: pointer;
 }
