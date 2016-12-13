@@ -1,11 +1,14 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </link>
-    <link rel="stylesheet" href="/styles/style-icons.css">
-    </link>
-    <link rel="stylesheet" href="/styles/style-shared.css">
-    </link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/styles/style-icons.css"/>
+    <link rel="stylesheet" href="/styles/style-shared.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -113,9 +116,13 @@
     </div>
     <div class="header-search">
         <div class="container">
-            <div class="header-search-form">
-                SEARCH FORM
-            </div>
+            <form class="header-search-form">
+                <input type="text"> </input>
+                <button type="submit" class="text-uppercase" style="box-shadow: none;">
+                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+                </button>
+
+            </form>
         </div>
     </div>
     <div class="header-nav">

@@ -122,10 +122,31 @@ the menu bar has a left part and a right part
 
 .header-search-form {
   display: inline-block;
-  margin-top: 5px;
   width: auto;
+  vertical-align: top;
+}
+
+.header-search-form input {
+  border-bottom: #e3e3e3;
+}
+
+.header-search-form button {
+  border: 0px none #FFF;
+  box-sizing: border-box;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
   height: 40px;
-  top: -5px;
+  list-style: outside none none;
+  margin: 0px;
+  outline: 0px none #FFF;
+  padding: 12px 14px;
+  background-color: transparent;
+}
+
+.header-search-form button svg {
+  width: 20px;
+  height: 20px;
 }
 
 .header-nav {
