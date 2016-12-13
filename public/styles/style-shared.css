@@ -112,7 +112,6 @@ the menu bar has a left part and a right part
 .header-search {
   margin-right: auto;
   margin-left: auto;
-  position: relative !important;
   height: 50px;
   margin-bottom: -82px;
   margin-top: 32px;
@@ -152,7 +151,6 @@ the menu bar has a left part and a right part
 .header-nav {
   margin-right: auto;
   margin-left: auto;
-  position: relative !important;
   height: 50px;
   margin-top: 32px;
   font-size: 1.154em;
