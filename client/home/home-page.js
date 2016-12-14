@@ -1,2 +1,4 @@
+var angular= require("angular");
+var home = angular.module("home",[]);
 
-console.log("hello");
+console.log("home is initialized");
