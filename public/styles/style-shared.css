@@ -131,18 +131,20 @@ the menu bar has a left part and a right part
 .header-search-form input {
     border: none;
     border-bottom: 1px solid #e3e3e3;
-    vertical-align: top;
     color:#636363;
+    padding-bottom: 5px;
+    vertical-align: top;
 }
 
 .header-search-form input:focus {
     outline: none;
 }
 
-.input-group {
+.header-search-form .input-group {
     position: relative;
     display: table;
     border-collapse: separate;
+    vertical-align: top;
 }
 
 .input-group__bar {
