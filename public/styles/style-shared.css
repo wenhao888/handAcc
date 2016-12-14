@@ -139,6 +139,47 @@ the menu bar has a left part and a right part
     outline: none;
 }
 
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.input-group__bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.input-group__bar:before,
+.input-group__bar:after {
+    background: #0076cc;
+}
+
+.input-group__bar:before,
+.input-group__bar:after {
+    display: block;
+    content: ' ';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+.input-group__bar:before {
+    left: 50%;
+}
+.input-group__bar:after {
+    right: 50%;
+}
+
+
+.input-group input:focus ~ .input-group__bar:before,
+.input-group input:focus ~ .input-group__bar:after,
+.input-group textarea:focus ~ .input-group__bar:before,
+.input-group textarea:focus ~ .input-group__bar:after {
+    width: 50%;
+}
+
 .header-search-form button {
     border: 0px none #FFF;
     box-sizing: border-box;
