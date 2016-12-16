@@ -20,8 +20,16 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
+    "browserify-shim": "^3.8.12",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-sass": "^3.0.0"
+  },
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "jquery": "global:$",
+    "angular": "global:angular"
   }
 }
