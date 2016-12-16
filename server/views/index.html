@@ -124,7 +124,9 @@
                 </div>
 
                 <button type="submit" class="text-uppercase" style="box-shadow: none;">
-                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+                    <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                    </svg>
                 </button>
 
             </form>
@@ -140,7 +142,9 @@
                 <ul class="nav-menu-list">
                     <li class="nav-menu-item" style="margin-right: 20px;">
                         <a href="" class="wave">
-                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-home"></use></svg>
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-home"></use>
+                            </svg>
                         </a>
                     </li>
                     <li class="nav-menu-item">
@@ -179,11 +183,19 @@
         </div>
     </div>
 </div>
-
+<!--
 <div class="page-content">
-       <div id="myCarousel">
+    <div id="myCarousel">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.src}}" style="margin:auto;">
+            </div>
+        </div>
+    </div>
 
-       </div>
 </div>
+-->
+{{message}}
+
 </body>
 </html>
