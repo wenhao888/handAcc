@@ -1,12 +1,14 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/vendor-styles/angular-carousel.min.css"/>
+
     <link rel="stylesheet" href="/styles/style-icons.css"/>
     <link rel="stylesheet" href="/styles/style-shared.css"/>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
-
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -17,7 +19,7 @@
     <script src="/javascripts/home/home-page.js"></script>
 </head>
 
-<body>
+<body ng-app="home" ng-controller="homeController">
 <div class="svg" style="display: none">
     <svg>
         <path id="svg-twitter" class="svg"

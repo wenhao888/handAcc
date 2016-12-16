@@ -1,0 +1,18 @@
+{
+  "name": "HandAcc",
+  "description": "",
+  "main": "",
+  "authors": [
+    "wlin"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wenhao888/HandAcc",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
