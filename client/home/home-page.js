@@ -1,5 +1,5 @@
 var angular=require("angular");
-var home = angular.module("home",["ui.bootstrap"]);
+var home = angular.module("home",["ui.bootstrap","slick"]);
 
 home.controller("homeController", ["$scope", function($scope) {
     $scope.slides= [
