@@ -243,3 +243,17 @@ the menu bar has a left part and a right part
     text-decoration: none;
     cursor: pointer;
 }
+
+
+
+
+.carousel-indicators li {
+    background-color: black;
+    border:none;
+}
+
+.carousel-indicators .active {
+    background-color: blue;
+}
+
+
