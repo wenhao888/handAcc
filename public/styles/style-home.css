@@ -4,3 +4,35 @@
     font-weight: lighter;
     text-align: center;
 }
+
+.product-preview-wrapper {
+  display: inline-block;
+  padding:0 15px;
+}
+
+
+
+.product-preview {
+  position: relative;
+  overflow: hidden;
+  height:100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.product-preview__info {
+  border-top-color: #dfdfdf;
+  background: #ffffff;
+}
+
+.product-preview__info {
+  position: absolute;
+  bottom: 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  width: 100%;
+  padding: 30px 30px 20px 30px;
+  border-radius: 0 0 5px 5px;
+}
