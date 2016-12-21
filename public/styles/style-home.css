@@ -1,3 +1,5 @@
+
+
 .newProducts {
     padding-top: 75px;
 }
@@ -51,24 +53,41 @@
 
 
 .slick-prev, .slick-next {
+    height:40px;
+    width:40px;
+}
+
+.slick-prev {
+    left: -45px;
+}
+
+.slick-next {
+    right: -45px;
 }
 
 .slick-prev:before {
-    content:"<";
+    font-family: 'Welldone';
+    content:"\e603";
     color:#878787;
-    width:20px;
-    height:20px;
+    display: block;
+    width:100%;
+    height:100%;
     background-color: white;
 }
 
 .slick-next:before {
-    content:">";
+    font-family: 'Welldone';
+    content:"\e602";
     color:#878787;
-    width:20px;
-    height:20px;
+    display: block;
+    width:100%;
+    height:100%;
     background-color: white;
 }
 
+.slick-prev:hover:before, .slick-next:hover:before  {
+    color: #0076cc;
+}
 
 
 
