@@ -48,3 +48,27 @@
 .product-preview:hover .product-preview__info {
     padding: 50px 30px 40px 30px;
 }
+
+
+.slick-prev, .slick-next {
+}
+
+.slick-prev:before {
+    content:"<";
+    color:#878787;
+    width:20px;
+    height:20px;
+    background-color: white;
+}
+
+.slick-next:before {
+    content:">";
+    color:#878787;
+    width:20px;
+    height:20px;
+    background-color: white;
+}
+
+
+
+
