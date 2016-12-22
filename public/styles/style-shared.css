@@ -76,6 +76,10 @@ the menu bar has a left part and a right part
     height: 14px;
 }
 
+.social-link-list-large .social-link-item.twitter svg {
+
+}
+
 .social-link-item.twitter a svg {
     fill: #fff;
 }
@@ -83,6 +87,12 @@ the menu bar has a left part and a right part
 .social-link-item.twitter a svg:hover {
     fill: #0076cc;
 }
+
+.social-link-list-large .social-link-item {
+    font-size: 1.385em;
+    line-height: 2em;
+}
+
 
 .user-link-list {
     padding: 0;
