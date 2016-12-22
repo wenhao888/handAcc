@@ -52,6 +52,10 @@ the menu bar has a left part and a right part
     font-size: 1.154em;
 }
 
+.social-link-item {
+    cursor: pointer;
+}
+
 .social-link-item a {
     color: white;
     cursor:pointer;
