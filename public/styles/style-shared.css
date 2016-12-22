@@ -54,6 +54,7 @@ the menu bar has a left part and a right part
 
 .social-link-item a {
     color: white;
+    cursor:pointer;
 }
 
 .social-link-item a:hover {
@@ -324,4 +325,65 @@ the menu bar has a left part and a right part
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+
+
+.footer-info {
+    background-color: #374850;
+    color: #bbc2c6;
+}
+
+.footer-info .row {
+    padding:10px 0;
+}
+
+.footer-info .title{
+    text-transform: uppercase;
+    color:white;
+}
+
+.footer-info ul{
+    list-style: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.footer-info li {
+    padding-bottom: 4px;
+    padding: 0 0 4px;
+    font-weight: lighter;
+}
+
+.footer-info li.icon {
+    padding-bottom:4px;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 1em;
+    line-height: 1.4em;
+    position:relative;
+    margin-left:20px;
+}
+
+.footer-info li.icon:before {
+    font-family: 'Welldone';
+    position: absolute;
+    font-size: 1em;
+    left: 0;
+    color:white;
+   margin-left:-20px;
+}
+
+
+.footer-info li.icon-telephone {
+    color: #00a0ff;
+}
+
+
+.footer-info a {
+    color: #bbc2c6;
 }
