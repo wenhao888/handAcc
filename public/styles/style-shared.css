@@ -291,8 +291,10 @@ the menu bar has a left part and a right part
     background-color: #00a6ff;
 }
 
-
-
+.footer-subscribe li a {
+    height:40px;
+    line-height:40px;
+}
 
 .footer-bottom {
     background-color: #ffffff;
