@@ -1,6 +1,6 @@
 var gulp = require("gulp");
-require("./gulp/build-js");
-require("./gulp/test-js");
+require("./gulp/build");
+require("./gulp/test");
+require("./gulp/schema");
 
 
-gulp.task("build",["build-js"]);

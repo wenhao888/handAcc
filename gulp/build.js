@@ -12,3 +12,4 @@ gulp.task("build-js", function () {
 });
 
 
+gulp.task("build",["build-js"]);
