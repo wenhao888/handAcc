@@ -19,11 +19,12 @@
     "morgan": "~1.7.0",
     "mysql2": "^1.1.2",
     "sequelize": "^3.28.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "gulp-mocha": "^3.0.1",
+    "chai": "^3.5.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "gulp-mocha": "^3.0.1"
+
   },
   "browserify": {
     "transform": [
