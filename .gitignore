@@ -2,3 +2,4 @@
 /node_modules
 /public/javascripts
 /bower_components
+/server/env
