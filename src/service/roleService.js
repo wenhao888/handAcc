@@ -1,4 +1,4 @@
-var db = require("../model");
+var db = require("../model/index");
 var Role = db.Role;
 
 function create(role) {

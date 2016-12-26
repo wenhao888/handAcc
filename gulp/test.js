@@ -3,7 +3,7 @@ var mocha = require("gulp-mocha");
 
 
 gulp.task("mocha-test", function() {
-    return gulp.src(['client/**/*.spec.js','library/**/*.spec.js','server/**/*.spec.js'], { read: false })
+    return gulp.src(['client/**/*.spec.js','src/**/*.spec.js','server/**/*.spec.js'], { read: false })
         .pipe(mocha({
             reporter: 'spec'
         }));

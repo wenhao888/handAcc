@@ -1,5 +1,5 @@
 var gulp = require("gulp");
-var db=require("../server/model");
+var db=require("../src/model");
 
 
 gulp.task("db-schema", function(callBack) {

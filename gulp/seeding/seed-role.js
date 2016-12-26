@@ -1,6 +1,6 @@
 
 var gulp = require("gulp");
-var roleService = require("../../server/service/roleService");
+var roleService = require("../../src/service/roleService");
 
 gulp. task("seed-role", function(callBack) {
     var roles = [{
