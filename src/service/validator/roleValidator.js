@@ -7,13 +7,19 @@
  *
  */
 
+var stringHelp = require("../help/stringHelp");
+var validationConstant = require("./validationConstant");
 
 function validate (role) {
-   var result = {
-       isValid:true,
-       error:""
+   var value = role || {};
+   if (stringHelp.isBlank(value.name)) {
+       return {
+           isValid: false,
+           error: "role name can't be blank"
+       }
    }
 
+   return validationConstant.validResult;
 
 }
 

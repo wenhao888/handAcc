@@ -9,6 +9,17 @@ function  format(format) {
     });
 }
 
+
+function isBlank(value) {
+    var text = value || "";
+    if (text.trim() === '') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 module.exports = {
-    format: format
+    format: format,
+    isBlank: isBlank
 };
