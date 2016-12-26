@@ -7,6 +7,8 @@ function define_model(Sequelize, sequelize) {
         timestamps: false,
         tableName: 'Role'
     });
+
+    return Role;
 }
 
 module.exports= {
