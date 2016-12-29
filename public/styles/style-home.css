@@ -31,6 +31,22 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+.product-preview .product-title {
+    height: 3em;
+}
+
+.product-preview .product-price {
+    font-weight: bold;
+}
+
+.product-preview__image {
+    padding-top:20px;
+}
+
+.product-preview__image img {
+    width:100%;
+}
+
 .product-preview__info {
     border-top-color: #dfdfdf;
     background: #ffffff;
