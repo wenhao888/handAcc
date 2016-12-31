@@ -5,6 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     line-height: 1.4em;
+    position:relative
 }
 
 .container {
@@ -271,8 +272,14 @@ the menu bar has a left part and a right part
     background-color: blue;
 }
 
+
+
 .page-footer {
     padding-bottom: 20px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
 }
 
 .footer-subscribe {

@@ -21,7 +21,7 @@
     <script src="/javascripts/home/home-page.js"></script>
 </head>
 
-<body ng-app="home" ng-controller="homeController">
+<body ng-app="home" ng-controller="homeController" >
 <%-include partial/svg.ejs%>
 
 <div class="header">
@@ -94,7 +94,7 @@
     </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" style="padding-bottom: 300px;">
     <div id="myCarousel">
         <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
             <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">

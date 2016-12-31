@@ -20,9 +20,21 @@ this layout is for general purpose. it only has a headline (without login and re
 
 <body>
 
-this is the layout page
+<%- include ../partial/svg.ejs %>
+<div class="header">
+    <%- include ../partial/headLineWithoutLogin.ejs %>
+</div>
 
-<%-container%>
+<div class="page-content">
+    <div class="container">
+        <%- content %>
+    </div>
+</div>
+
+
+<div class="page-footer">
+    <%- include ../partial/copyRight.ejs %>
+</div>
 
 </body>
 
