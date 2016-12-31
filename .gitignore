@@ -3,3 +3,4 @@
 /public/javascripts
 /bower_components
 /src/env
+*.log
