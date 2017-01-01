@@ -398,3 +398,9 @@ the menu bar has a left part and a right part
 .footer-info a {
     color: #bbc2c6;
 }
+
+.page-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
