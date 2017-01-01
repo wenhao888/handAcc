@@ -95,10 +95,10 @@
 </div>
 
 <div class="page-content" style="padding-bottom: 300px;">
-    <div id="myCarousel" style="min-height:445px;">
+    <div id="myCarousel">
         <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
             <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                <img ng-src="{{slide.src}}" style="width:100%;">
+                <img ng-src="{{slide.src}}" style="width:100%; min-height:445px;">
             </div>
         </div>
     </div>

@@ -404,3 +404,11 @@ the menu bar has a left part and a right part
     font-weight: lighter;
     margin-bottom: 20px;
 }
+
+.invisible {
+    display: none;
+}
+
+.visible-block {
+    display: block !important;
+}
