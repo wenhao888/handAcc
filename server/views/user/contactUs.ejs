@@ -1,6 +1,49 @@
 <%-contentFor("content")%>
 
-<div class="container">
-    this is the contactUs page
+
+<div class="container" style="width:500px;">
+    <h3 class="page-title">
+        Contact Us
+    </h3>
+
+    <form class="form-horizontal login-form">
+        <div class="form-group">
+            <label class="col-sm-4">Your name: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="name"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-4"> Email: </label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" name="email">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-4"> Phone: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="phone">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-4"> Your message: </label>
+            <div class="col-sm-12" >
+                <textarea  class="form-control" name="message" style="height:200px; resize: vertical"> </textarea>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-8 col-sm-offset-4">
+                <a class="btn btn-sm btn-warning" href="/"> Cancel </a>
+                <button class="btn btn-sm btn-primary"> Submit </button>
+            </div>
+        </div>
+
+    </form>
 </div>
+
 
