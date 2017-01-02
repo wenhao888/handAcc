@@ -3,7 +3,7 @@ var browserify  = require('gulp-browserify');
 
 
 gulp.task("build-js", function () {
-    gulp.src('./client/**/*-page.js', { read: false })
+    gulp.src('./src/views/**/*-page.js', { read: false })
         .pipe( browserify ({
             insertGlobals: true,
             debug: false
