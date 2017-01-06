@@ -412,3 +412,7 @@ the menu bar has a left part and a right part
 .visible-block {
     display: block !important;
 }
+
+.glyphicon-shopping-cart {
+    font-size:2em
+}
