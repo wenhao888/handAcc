@@ -7,7 +7,7 @@ router.get('/list', function(req, res, next) {
     res.render('product/list', {layout:'layout/general'});
 });
 
-router.get('/:id', function(req,res,next) {
+router.get('/:id/detail', function(req,res,next) {
     var id = req.params.id;
     var product = productService.getProduct(id);
     res.render("product/productDetail", {layout:'layout/general', "product": product})
