@@ -1,0 +1,19 @@
+
+[
+  {
+    "id":1,
+    "name":"Aluminum USB Audio Adapter with 3.5mm Headphone and Microphone",
+    "features":[
+      "line 1",
+      "line 2",
+      "line 3"
+    ],
+    "dimension":"",
+    "normal-price":10,
+    "discount-price:": 8.99,
+    "pictures":[],
+    "buyUrl":"http://www.amazon.com",
+    "hasTestingResult":true
+  }
+
+]
