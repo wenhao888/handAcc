@@ -1,4 +1,6 @@
 var express = require('express');
+var productService = require("../service/product/productService");
+
 var router = express.Router();
 
 /* GET users listing. */
