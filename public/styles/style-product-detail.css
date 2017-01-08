@@ -1,0 +1,55 @@
+.image-container {
+    float:left;
+    position: relative;
+}
+
+.thumbnail-list {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+.thumbnail-list li {
+
+}
+
+.thumbnail-button {
+    width:  42px;
+    height: 42px;
+    border: 1px solid silver;
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.thumbnail-button img {
+    width:100%;
+}
+
+
+.image-display {
+    width:390px;
+    min-height: 50px;
+    margin-left:45px;
+}
+
+
+.image-display img {
+    width:100%;
+}
+
+
+.active {
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,.5)
+}
+
+.thumbnail-button:hover {
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,.5)
+}
+
