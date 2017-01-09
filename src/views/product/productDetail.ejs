@@ -11,7 +11,7 @@
         <div class="image-container">
             <ul class="thumbnail-list">
                 <li ng-repeat="i in product.images">
-                    <span  class="thumbnail-button" ng-class="{active: $index==currentIndex}" ng-click="clickImage($index)">
+                    <span  class="thumbnail-button" ng-class="{active: $index==currentIndex}" ng-mouseover="clickImage($index)">
                         <img ng-src="{{i}}" />
                     </span>
                 </li>
