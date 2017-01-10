@@ -24,7 +24,37 @@
         </div>
 
         <div class="detail-container">
-            features
+            <p class="text-info">
+                Features:
+            </p>
+
+
+            <ul class="feature-list">
+                <li ng-repeat="f in product.features">
+                    <span class="feature-item" ng-bind="f">
+                    </span>
+                </li>
+            </ul>
+
+            <p>
+                <span class="text-info"> Dimension:  </span>
+                <span ng-bind="product.dimension"></span>
+            </p>
+
+            <p>
+                <span class="text-info"> Price:  </span>
+                <span ng-bind="product.normalPrice" ng-class="{'overridden-Price':!!product.discountPrice}"></span>
+                <span> &nbsp; &nbsp;
+                </span>
+                <span class="price" ng-bind="product.discountPrice"></span>
+            </p>
+
+            <p>
+                <a href="#">
+                    <span class="glyphicon glyphicon-shopping-cart" ></span>
+                </a>
+            </p>
+
         </div>
     </div>
 </div>

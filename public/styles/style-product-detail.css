@@ -1,6 +1,7 @@
 .image-container {
     float:left;
     position: relative;
+    padding-right: 30px;
 }
 
 .thumbnail-list {
@@ -49,4 +50,11 @@
 }
 
 
+.feature-list {
+    list-style-position: inside;
+    color:#949494;
+}
 
+.feature-item{
+    color:black;
+}

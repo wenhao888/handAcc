@@ -416,3 +416,11 @@ the menu bar has a left part and a right part
 .glyphicon-shopping-cart {
     font-size:2em
 }
+
+.price {
+    color:green;
+}
+.overridden-Price {
+    color:darkred;
+    text-decoration: line-through
+}

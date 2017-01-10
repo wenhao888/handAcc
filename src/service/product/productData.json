@@ -2,15 +2,16 @@
 [
   {
     "id":1,
-    "name":"Aluminum's USB Audio Adapter with 3.5mm Headphone and Microphone",
+    "name":"USB 3.0 External Hard Drive/SSD Enclosure Case",
     "features":[
-      "line 1",
-      "line 2",
-      "line 3"
+      "USB3.0 transfer interface, maximum capacity reach 5Gbps; Support hot-swap, Plug &play; Blue and red power supply/HDD LED activity indicator",
+      "Automatic sleep and spin down mode. sleep mode entered after 10 minutes of data access inactivity",
+      "Suitable for 9.5mm and below thickness 2.5'' SATA HDD and SSD",
+      "Package Contents: 1 x HandAcc RBG256 Smart LED Atmosphere Bedside Lamp, 1 x UL Verified AC Adapter, 1 x User manual (Multi-language)"
     ],
-    "dimension":"",
-    "normal-price":10,
-    "discount-price:": 8.99,
+    "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
+    "normalPrice": "$10",
+    "discountPrice": "$8.99",
     "images":[
       "/images/products/1/1.jpg",
       "/images/products/1/2.jpg",
@@ -21,7 +22,7 @@
       "/images/products/1/7.jpg"
     ],
     "buyUrl":"http://www.amazon.com",
-    "hasTestingResult":true
+    "hasTestingResult":false
   }
 
 ]
