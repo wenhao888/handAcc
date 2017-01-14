@@ -73,6 +73,28 @@
     ],
     "buyUrl":"http://www.amazon.com",
     "hasTestingResult":false
+  },
+  {
+    "id":4,
+    "name":"Waterproof Floating Cellphone Case",
+    "features":[
+      "Made of high density polyethylene with secure dual swivel lock and sealable closure clip",
+      "Universal size fits all smartphones up to 5.5 inch, also credit card, wallet and money",
+      "IPX8 complaint. Support continual submersion in water under 15m for 30 minutes"
+    ],
+    "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
+    "normalPrice": "$12.99",
+    "discountPrice": "$5.89",
+    "images":[
+      "/images/products/4/1.jpg",
+      "/images/products/4/2.jpg",
+      "/images/products/4/3.jpg",
+      "/images/products/4/4.jpg",
+      "/images/products/4/5.jpg",
+      "/images/products/4/6.jpg",
+      "/images/products/4/7.jpg"
+    ],
+    "buyUrl":"http://www.amazon.com",
+    "hasTestingResult":false
   }
-
 ]
