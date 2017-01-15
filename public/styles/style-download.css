@@ -21,3 +21,7 @@
 .download-table tr{
     border:1px solid silver;
 }
+
+.download-table {
+    margin-top: 30px;
+}
