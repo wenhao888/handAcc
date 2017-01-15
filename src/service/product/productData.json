@@ -143,5 +143,29 @@
     ],
     "buyUrl":"http://www.amazon.com",
     "hasTestingResult":false
+  },
+  {
+    "id":7,
+    "name":"Clip Desk Lamp Dimmable LED USB Reading Light",
+    "features":[
+      "Humanized Design- Touch sensitive switch, 3-Level djustable brightness and intensity light which is soft and flicker-free, makes your eyes comfortable",
+      "Multi Purpose- It can stand on desk with its own anti-skid base or can be cliped almost anywhere, such as bedframe, headboard, tables, computer desk, etc",
+      "USB Powered- With built-in rechargeble battery,can be connected to power adapter, power bank, computer or other USB devices to power the lamp",
+      "360 Degrees Rotated Tube-The sleek, modern and flexible metal gooseneck provides natural light right where you need",
+      "Our HandACC clip desk lamp has 14 long-lasting LEDs (up to 50,000 hours) and is portable, convenient for those who need to move it around)"
+    ],
+    "dimension":"148 mm (bulb) * 56 mm * 120 mm * 350 mm (W*L*H)",
+    "normalPrice": "$22.99",
+    "discountPrice": "$12.99",
+    "images":[
+      "/images/products/7/1.jpg",
+      "/images/products/7/2.jpg",
+      "/images/products/7/3.jpg",
+      "/images/products/7/4.jpg",
+      "/images/products/7/5.jpg",
+      "/images/products/7/6.jpg"
+    ],
+    "buyUrl":"http://www.amazon.com",
+    "hasTestingResult":false
   }
 ]
