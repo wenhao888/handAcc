@@ -96,5 +96,52 @@
     ],
     "buyUrl":"http://www.amazon.com",
     "hasTestingResult":false
+  },
+  {
+    "id":5,
+    "name":"500 Lumens Handheld Flashlight with Bike Mount Holder",
+    "features":[
+      "Mechanical rotating zoom system, more precise and studier, easy to adjust between spot and flood",
+      "Bike mount holder included, easy switch between bike light and handheld LED Flashlight",
+      "3 modes for increased versatility: high/low/strobe, push-button tail switch for one-handed operation",
+      "Can use 3 AAA size alkaline batteries or one 18650 rechargeable battery (batteries not included)",
+      "Made of high quality aluminum alloy and solidly constructed: skid-proof, waterproof and shockproof"
+    ],
+    "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
+    "normalPrice": "$40.98",
+    "discountPrice": "$9.99",
+    "images":[
+      "/images/products/5/1.jpg",
+      "/images/products/5/2.jpg",
+      "/images/products/5/3.jpg",
+      "/images/products/5/4.jpg",
+      "/images/products/5/5.jpg",
+      "/images/products/5/6.jpg"
+    ],
+    "buyUrl":"http://www.amazon.com",
+    "hasTestingResult":false
+  },
+  {
+    "id":6,
+    "name":"3-Port USB 3.0 Hub and RJ45 10/100/1000 Gigabit Ethernet Hub Converter",
+    "features":[
+      "Provide USB3.0 ports and one RJ45 Gigabit Ethernet port supporting 10/100/1000Mbps Ethernet",
+      "IEEE 802.3, 802.3u, and 802.3ab compatible. Supports full duplex operation with IEEE 802.3x flow control",
+      "Premium aluminum finish matches the look and feel of your MacBook",
+      "No external power required, built-in surge protection keep your devices and data safe",
+      "Support plug & play in compatible OS (On Windows, a driver needs to be manually installed to enable Ethernet connection)"
+    ],
+    "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
+    "normalPrice": "#39.99",
+    "discountPrice": "$16.99",
+    "images":[
+      "/images/products/6/1.jpg",
+      "/images/products/6/2.jpg",
+      "/images/products/6/3.jpg",
+      "/images/products/6/4.jpg",
+      "/images/products/6/5.jpg"
+    ],
+    "buyUrl":"http://www.amazon.com",
+    "hasTestingResult":false
   }
 ]
