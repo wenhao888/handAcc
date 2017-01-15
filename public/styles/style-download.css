@@ -1,0 +1,23 @@
+
+.left-container {
+    position:absolute;
+    left:0;
+    top:0;
+    min-height: 300px;
+    width:190px;
+}
+.left-navigator {
+    border:1px solid silver;
+    border-radius: 5px;
+    font-size:1em;
+    min-height: 300px;
+}
+
+.content-container {
+    margin-left:200px;
+    min-height:300px;
+}
+
+.download-table tr{
+    border:1px solid silver;
+}
