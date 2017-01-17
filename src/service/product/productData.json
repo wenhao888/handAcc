@@ -3,6 +3,15 @@
   {
     "id":1,
     "name":"USB 3.0 External Hard Drive/SSD Enclosure Case",
+    "summary_features":[
+      "USB3.0 transfer interface, maximum capacity reach 5Gbps; Support hot-swap, Plug &play; Blue and red power supply/HDD LED activity indicator",
+      "Automatic sleep and spin down mode. sleep mode entered after 10 minutes of data access inactivity",
+      "Suitable for 9.5mm and below thickness 2.5'' SATA HDD and SSD",
+      "Package Contents: 1 x HandAcc RBG256 Smart LED Atmosphere Bedside Lamp, 1 x UL Verified AC Adapter, 1 x User manual (Multi-language)"
+
+    ],
+    "summary_image": "/images/products/1/1.jpg",
+
     "features":[
       "USB3.0 transfer interface, maximum capacity reach 5Gbps; Support hot-swap, Plug &play; Blue and red power supply/HDD LED activity indicator",
       "Automatic sleep and spin down mode. sleep mode entered after 10 minutes of data access inactivity",
@@ -10,8 +19,8 @@
       "Package Contents: 1 x HandAcc RBG256 Smart LED Atmosphere Bedside Lamp, 1 x UL Verified AC Adapter, 1 x User manual (Multi-language)"
     ],
     "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
-    "normalPrice": "$10",
-    "discountPrice": "$8.99",
+    "oldPrice": "$10",
+    "price":    "$8.99",
     "images":[
       "/images/products/1/1.jpg",
       "/images/products/1/2.jpg",
@@ -27,6 +36,15 @@
   {
     "id":2,
     "name":"Aluminum USB Audio Adapter with 3.5mm Headphone and Microphone",
+    "summary_features":[
+      "Converts USB to 3.5mm audio and microphone signals",
+      "Enables PC style 3.5mm headsets with microphone to be used on your Mac",
+      "Premium Aluminum finish matches the look and feel of your Mac",
+      "USB2.0 High-speed specification",
+      "Plug and Play, no extra power/software/driver needed, easy to use"
+
+    ],
+    "summary_image":"/images/products/2/1.jpg",
     "features":[
       "Converts USB to 3.5mm audio and microphone signals",
       "Enables PC style 3.5mm headsets with microphone to be used on your Mac",
@@ -35,8 +53,8 @@
       "Plug and Play, no extra power/software/driver needed, easy to use"
     ],
     "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
-    "normalPrice": "$19.99",
-    "discountPrice": "$5.99",
+    "oldPrice": "$19.99",
+    "price":    "$5.99",
     "images":[
       "/images/products/2/1.jpg",
       "/images/products/2/2.jpg",
@@ -52,6 +70,13 @@
   {
     "id":3,
     "name":"Bedside Lamp with Touch Sensor",
+    "summary_features":[
+      "Touch-Operated with vibrant and immersive light",
+      "2 IN 1-Touch Sensor activates auto-cycling mode with 256 stunning colors",
+      "Eco-friendly low power consumption design for longer lifespan (rated at 35,000 hours)",
+      "Package Contents: 1 x HandAcc RBG256 Smart LED Atmosphere Bedside Lamp, 1 x UL Verified AC Adapter, 1 x User manual (Multi-language)"
+    ],
+    "summary_image":"/images/products/3/1.jpg",
     "features":[
       "Touch-Operated with vibrant and immersive light",
       "2 IN 1-Touch Sensor activates auto-cycling mode with 256 stunning colors",
@@ -59,8 +84,8 @@
       "Package Contents: 1 x HandAcc RBG256 Smart LED Atmosphere Bedside Lamp, 1 x UL Verified AC Adapter, 1 x User manual (Multi-language)"
     ],
     "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
-    "normalPrice": "$45.99",
-    "discountPrice": "$25.99",
+    "oldPrice": "$45.99",
+    "price":    "$25.99",
     "images":[
       "/images/products/3/1.jpg",
       "/images/products/3/2.jpg",
@@ -77,14 +102,20 @@
   {
     "id":4,
     "name":"Waterproof Floating Cellphone Case",
+    "summary_features":[
+      "Made of high density polyethylene with secure dual swivel lock and sealable closure clip",
+      "Universal size fits all smartphones up to 5.5\", also credit card, wallet and money",
+      "IPX8 complaint. Support continual submersion in water under 15m for 30 minutes"
+    ],
+    "summary_image":"/images/products/4/1.jpg",
     "features":[
       "Made of high density polyethylene with secure dual swivel lock and sealable closure clip",
       "Universal size fits all smartphones up to 5.5 inch, also credit card, wallet and money",
       "IPX8 complaint. Support continual submersion in water under 15m for 30 minutes"
     ],
     "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
-    "normalPrice": "$12.99",
-    "discountPrice": "$5.89",
+    "oldPrice": "$12.99",
+    "price":    "$5.89",
     "images":[
       "/images/products/4/1.jpg",
       "/images/products/4/2.jpg",
@@ -100,6 +131,14 @@
   {
     "id":5,
     "name":"500 Lumens Handheld Flashlight with Bike Mount Holder",
+    "summary_features":[
+      "Mechanical rotating zoom system, more precise and studier, easy to adjust between spot and flood",
+      "Bike mount holder included, easy switch between bike light and handheld LED Flashlight",
+      "3 modes for increased versatility: high/low/strobe, push-button tail switch for one-handed operation",
+      "Can use 3 AAA size alkaline batteries or one 18650 rechargeable battery (batteries not included)",
+      "Made of high quality aluminum alloy and solidly constructed: skid-proof, waterproof and shockproof"
+    ],
+    "summary_image":"/images/products/5/1.jpg",
     "features":[
       "Mechanical rotating zoom system, more precise and studier, easy to adjust between spot and flood",
       "Bike mount holder included, easy switch between bike light and handheld LED Flashlight",
@@ -108,8 +147,8 @@
       "Made of high quality aluminum alloy and solidly constructed: skid-proof, waterproof and shockproof"
     ],
     "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
-    "normalPrice": "$40.98",
-    "discountPrice": "$9.99",
+    "oldPrice": "$40.98",
+    "price":    "$9.99",
     "images":[
       "/images/products/5/1.jpg",
       "/images/products/5/2.jpg",
@@ -124,6 +163,15 @@
   {
     "id":6,
     "name":"3-Port USB 3.0 Hub and RJ45 10/100/1000 Gigabit Ethernet Hub Converter",
+    "summary_features":[
+      "Provide USB3.0 ports and one RJ45 Gigabit Ethernet port supporting 10/100/1000Mbps Ethernet",
+      "IEEE 802.3, 802.3u, and 802.3ab compatible. Supports full duplex operation with IEEE 802.3x flow control",
+      "Premium aluminum finish matches the look and feel of your Mac",
+      "No external power required, built-in surge protection keep your devices and data safe",
+      "Support plug & play in compatible OS (On Windows, a driver needs to be manually installed to enable Ethernet connection)"
+
+    ],
+    "summary_image":"/images/products/6/1.jpg",
     "features":[
       "Provide USB3.0 ports and one RJ45 Gigabit Ethernet port supporting 10/100/1000Mbps Ethernet",
       "IEEE 802.3, 802.3u, and 802.3ab compatible. Supports full duplex operation with IEEE 802.3x flow control",
@@ -132,8 +180,8 @@
       "Support plug & play in compatible OS (On Windows, a driver needs to be manually installed to enable Ethernet connection)"
     ],
     "dimension":"1 inch * 1 inch * 1 inch (W*L*H)",
-    "normalPrice": "#39.99",
-    "discountPrice": "$16.99",
+    "oldPrice": "$39.99",
+    "price":    "$16.99",
     "images":[
       "/images/products/6/1.jpg",
       "/images/products/6/2.jpg",
@@ -147,6 +195,15 @@
   {
     "id":7,
     "name":"Clip Desk Lamp Dimmable LED USB Reading Light",
+    "summary_features":[
+      "Humanized Design- Touch sensitive switch, 3-Level djustable brightness and intensity light which is soft and flicker-free, makes your eyes comfortable",
+      "Multi Purpose- It can stand on desk with its own anti-skid base or can be cliped almost anywhere, such as bedframe, headboard, tables, computer desk, etc",
+      "USB Powered- With built-in rechargeble battery,can be connected to power adapter, power bank, computer or other USB devices to power the lamp",
+      "360 Degrees Rotated Tube-The sleek, modern and flexible metal gooseneck provides natural light right where you need",
+      "Our HandACC clip desk lamp has 14 long-lasting LEDs (up to 50,000 hours) and is portable, convenient for those who need to move it around"
+
+    ],
+    "summary_image":"/images/products/7/1.jpg",
     "features":[
       "Humanized Design- Touch sensitive switch, 3-Level djustable brightness and intensity light which is soft and flicker-free, makes your eyes comfortable",
       "Multi Purpose- It can stand on desk with its own anti-skid base or can be cliped almost anywhere, such as bedframe, headboard, tables, computer desk, etc",
@@ -155,8 +212,8 @@
       "Our HandACC clip desk lamp has 14 long-lasting LEDs (up to 50,000 hours) and is portable, convenient for those who need to move it around)"
     ],
     "dimension":"148 mm (bulb) * 56 mm * 120 mm * 350 mm (W*L*H)",
-    "normalPrice": "$22.99",
-    "discountPrice": "$12.99",
+    "oldPrice": "$22.99",
+    "price":    "$12.99",
     "images":[
       "/images/products/7/1.jpg",
       "/images/products/7/2.jpg",
@@ -171,6 +228,15 @@
   {
     "id":8,
     "name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (white)",
+    "summary_features":[
+      "Handy desk clamp LED lamp. Energy efficient and safe to use with low voltage wire",
+      "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER",
+      "3-LEVEL DIMMER TOUCH CONTROL, BRIGHTER, MORE ENERGY-SAVING",
+      "Adjustable Color Temperature, The smooth light output doesn't cast hard shadows which helps to protect your eyes",
+      "CLAMP-ON LIGHT EXTRA LONG GOOSE-NECK "
+
+    ],
+    "summary_image":"/images/products/8/1.jpg",
     "features":[
       "HANDY DESK LAMP CLIP Very EASY to use and Doesn't get much hot like other models! Be SAFE because it's low voltage wire. Designed for the headboard, working studio, reading or makeup application",
       "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER: Great feature that many of the other lights didn't have. very STRONG and will NOT scratch the surface it is attached to, Good clip that attaches to a wide variety of surfaces. By ergonomic design, can be operated easily by those with weaker hands. Clamp size 5.12 * 2.20. The clip-on light, NOT contain a battery, BUT plugs into a USB port",
@@ -179,7 +245,7 @@
       "CLAMP-ON LIGHT EXTRA LONG GOOSE-NECK: Ultimate Flexibility Perfect for reading in bed. Great terrific little lamp for the office or desk. The high-quality silicone flexible neck, feels exquisite in your hand, the premium quality neck will bend freely creating no noise. The light output is wide with no bright spots making it the perfect light for you"
     ],
     "dimension":"15.1 x 15.8 x 2.4  (W*L*H)",
-    "discountPrice": "$23.99",
+    "price": "$23.99",
     "images":[
       "/images/products/8/1.jpg",
       "/images/products/8/2.jpg",
@@ -195,6 +261,14 @@
   {
     "id":9,
     "name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (black)",
+    "summary_features":[
+      "Handy desk clamp LED lamp. Energy efficient and safe to use with low voltage wire",
+      "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER",
+      "3-LEVEL DIMMER TOUCH CONTROL, BRIGHTER, MORE ENERGY-SAVING",
+      "Adjustable Color Temperature, The smooth light output doesn't cast hard shadows which helps to protect your eyes",
+      "CLAMP-ON LIGHT EXTRA LONG GOOSE-NECK "
+    ],
+    "summary_image": "/images/products/9/1.jpg",
     "features":[
       "HANDY DESK LAMP CLIP Very EASY to use and Doesn't get much hot like other models! Be SAFE because it's low voltage wire. Designed for the headboard, working studio, reading or makeup application",
       "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER: Great feature that many of the other lights didn't have. very STRONG and will NOT scratch the surface it is attached to, Good clip that attaches to a wide variety of surfaces. By ergonomic design, can be operated easily by those with weaker hands. Clamp size 5.12 * 2.20. The clip-on light, NOT contain a battery, BUT plugs into a USB port",
@@ -203,7 +277,7 @@
       "CLAMP-ON LIGHT EXTRA LONG GOOSE-NECK: Ultimate Flexibility Perfect for reading in bed. Great terrific little lamp for the office or desk. The high-quality silicone flexible neck, feels exquisite in your hand, the premium quality neck will bend freely creating no noise. The light output is wide with no bright spots making it the perfect light for you"
     ],
     "dimension":"15.1 x 15.8 x 2.4  (W*L*H)",
-    "discountPrice": "$20.89",
+    "price": "$20.89",
     "images":[
       "/images/products/9/1.jpg",
       "/images/products/9/2.jpg",

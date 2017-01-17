@@ -10,7 +10,12 @@ function getProduct(id) {
 }
 
 
+function getAll() {
+    return products;
+}
+
 
 module.exports = {
-    getProduct: getProduct
+    getProduct: getProduct,
+    getAll:getAll
 };
