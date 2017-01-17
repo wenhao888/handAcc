@@ -43,10 +43,10 @@
 
             <p>
                 <span class="text-info"> Price:  </span>
-                <span ng-bind="product.normalPrice" ng-class="{'overridden-Price':!!product.discountPrice}"></span>
+                <span ng-bind="product.oldPrice" class="overridden-Price"></span>
                 <span> &nbsp; &nbsp;
                 </span>
-                <span class="price" ng-bind="product.discountPrice"></span>
+                <span class="price" ng-bind="product.price"></span>
             </p>
 
             <p>
