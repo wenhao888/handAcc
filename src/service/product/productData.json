@@ -167,5 +167,53 @@
     ],
     "buyUrl":"http://www.amazon.com",
     "hasTestingResult":false
+  },
+  {
+    "id":8,
+    "name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (white)",
+    "features":[
+      "HANDY DESK LAMP CLIP Very EASY to use and Doesn't get much hot like other models! Be SAFE because it's low voltage wire. Designed for the headboard, working studio, reading or makeup application",
+      "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER: Great feature that many of the other lights didn't have. very STRONG and will NOT scratch the surface it is attached to, Good clip that attaches to a wide variety of surfaces. By ergonomic design, can be operated easily by those with weaker hands. Clamp size 5.12 * 2.20. The clip-on light, NOT contain a battery, BUT plugs into a USB port",
+      "3-LEVEL DIMMER TOUCH CONTROL, BRIGHTER, MORE ENERGY-SAVING: A nice bedside clamp-on light to read by. Compared to some other 7W clip on lamps that only produce 170lux at 40cm our 5W lamp provides 374lux! That's brighter and with a 60% power reduction!",
+      "Adjustable Color Temperature, The smooth light output doesn't cast hard shadows which helps to protect your eyes",
+      "CLAMP-ON LIGHT EXTRA LONG GOOSE-NECK: Ultimate Flexibility Perfect for reading in bed. Great terrific little lamp for the office or desk. The high-quality silicone flexible neck, feels exquisite in your hand, the premium quality neck will bend freely creating no noise. The light output is wide with no bright spots making it the perfect light for you"
+    ],
+    "dimension":"15.1 x 15.8 x 2.4  (W*L*H)",
+    "discountPrice": "$23.99",
+    "images":[
+      "/images/products/8/1.jpg",
+      "/images/products/8/2.jpg",
+      "/images/products/8/3.jpg",
+      "/images/products/8/4.jpg",
+      "/images/products/8/5.jpg",
+      "/images/products/8/6.jpg",
+      "/images/products/8/7.jpg"
+    ],
+    "buyUrl":"http://www.amazon.com",
+    "hasTestingResult":false
+  },
+  {
+    "id":9,
+    "name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (black)",
+    "features":[
+      "HANDY DESK LAMP CLIP Very EASY to use and Doesn't get much hot like other models! Be SAFE because it's low voltage wire. Designed for the headboard, working studio, reading or makeup application",
+      "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER: Great feature that many of the other lights didn't have. very STRONG and will NOT scratch the surface it is attached to, Good clip that attaches to a wide variety of surfaces. By ergonomic design, can be operated easily by those with weaker hands. Clamp size 5.12 * 2.20. The clip-on light, NOT contain a battery, BUT plugs into a USB port",
+      "3-LEVEL DIMMER TOUCH CONTROL, BRIGHTER, MORE ENERGY-SAVING: A nice bedside clamp-on light to read by. Compared to some other 7W clip on lamps that only produce 170lux at 40cm our 5W lamp provides 374lux! That's brighter and with a 60% power reduction!",
+      "Adjustable Color Temperature, The smooth light output doesn't cast hard shadows which helps to protect your eyes",
+      "CLAMP-ON LIGHT EXTRA LONG GOOSE-NECK: Ultimate Flexibility Perfect for reading in bed. Great terrific little lamp for the office or desk. The high-quality silicone flexible neck, feels exquisite in your hand, the premium quality neck will bend freely creating no noise. The light output is wide with no bright spots making it the perfect light for you"
+    ],
+    "dimension":"15.1 x 15.8 x 2.4  (W*L*H)",
+    "discountPrice": "$20.89",
+    "images":[
+      "/images/products/9/1.jpg",
+      "/images/products/9/2.jpg",
+      "/images/products/9/3.jpg",
+      "/images/products/9/4.jpg",
+      "/images/products/9/5.jpg",
+      "/images/products/9/6.jpg",
+      "/images/products/9/7.jpg"
+    ],
+    "buyUrl":"http://www.amazon.com",
+    "hasTestingResult":false
   }
 ]
