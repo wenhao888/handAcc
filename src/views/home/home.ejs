@@ -23,7 +23,9 @@
     <script src="/javascripts/home/home-page.js"></script>
 </head>
 
-<body ng-app="home" ng-controller="homeController" >
+<body ng-app="home" ng-controller="homeController"
+      ng-init="newProducts=<%=JSON.stringify(newProducts)%>">
+
 <%-include ../partial/svg.ejs%>
 
 <div class="header">
