@@ -100,104 +100,29 @@
             </h2>
 
             <slick infinite=false slides-to-show="4" slides-to-scroll="4" style="height:440px;">
-                <div class="product-preview-wrapper">
+
+                <div class="product-preview-wrapper" ng-repeat="p in newProducts">
                     <div class="product-preview">
                         <div class="product-preview__image">
-                            <a href="/products/2/detail">
-                                <img src="/images/audio_adapter.jpg" style="width:100%;"> </img>
+                            <a href="/products/{{p.id}}/detail">
+                                <img ng-src="{{p['summary_image']}}" style="width:100%;"> </img>
                             </a>
                         </div>
                         <div class="product-preview__info">
-                            <div class="product-title">
-                                Aluminum USB Audio Adapter
+                            <div class="product-title" ng-bind="p['summary_name']">
+
                             </div>
                             <div class="product-price">
-                                $5.99
+                                <span ng-bind="p.oldPrice" class="overridden-Price"></span>
+                                <span> &nbsp; &nbsp;
+                                 </span>
+                                <span class="price" ng-bind="p.price"></span>
                             </div>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="product-preview-wrapper">
-                    <div class="product-preview">
-                        <div class="product-preview__image">
-                            <a href="/products/3/detail">
-                                <img src="/images/bedsideLamp.jpg" style="width:100%;"> </img>
-                            </a>
-                        </div>
-
-                        <div class="product-preview__info">
-                            <div class="product-title">
-                                LED Atmosphere Bedside Lamp
-                            </div>
-
-                            <div class="product-price">
-                                $25.99
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="product-preview-wrapper">
-                    <div class="product-preview">
-                        <div class="product-preview__image">
-                            <a href="/products/1/detail">
-                                <img src="/images/externalDskCase.jpg" style="width:100%;"> </img>
-                            </a>
-                        </div>
-
-                        <div class="product-preview__info">
-                            <div class="product-title">
-                                External Hard Drive Enclosure Case
-                            </div>
-                            <div class="product-price">
-                                $11.99
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="product-preview-wrapper">
-                    <div class="product-preview">
-                        <div class="product-preview__image">
-                            <a href="/products/5/detail">
-                                <img src="/images/flashlight.jpg" style="width:100%;"> </img>
-                            </a>
-                        </div>
-
-                        <div class="product-preview__info">
-                            <div class="product-title">
-                                LED Handheld Flashlight
-                            </div>
-                            <div class="product-price">
-                                $9.99
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="product-preview-wrapper">
-                    <div class="product-preview">
-                        <div class="product-preview__image">
-                            <a href="/products/6/detail">
-                                <img src="/images/hub.jpg" style="width:100%;"> </img>
-                            </a>
-                        </div>
-
-                        <div class="product-preview__info">
-                            <div class="product-title">
-                                USB 3.0 Hub with RJ45 Ethernet Converter
-                            </div>
-                            <div class="product-price">
-                                $17.99
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </slick>
 
         </div>

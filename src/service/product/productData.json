@@ -3,6 +3,7 @@
   {
     "id":1,
     "name":"USB 3.0 External Hard Drive/SSD Enclosure Case",
+    "summary_name":"External Hard Drive Enclosure Case",
     "summary_features":[
       "USB3.0 transfer interface, maximum capacity reach 5Gbps; Support hot-swap, Plug &play; Blue and red power supply/HDD LED activity indicator",
       "Automatic sleep and spin down mode. sleep mode entered after 10 minutes of data access inactivity",
@@ -36,6 +37,7 @@
   {
     "id":2,
     "name":"Aluminum USB Audio Adapter with 3.5mm Headphone and Microphone",
+    "summary_name":"USB Audio Adapter with Headphone & Microphone",
     "summary_features":[
       "Converts USB to 3.5mm audio and microphone signals",
       "Enables PC style 3.5mm headsets with microphone to be used on your Mac",
@@ -70,6 +72,7 @@
   {
     "id":3,
     "name":"Bedside Lamp with Touch Sensor",
+    "summary_name":"Bedside Lamp with Touch Sensor",
     "summary_features":[
       "Touch-Operated with vibrant and immersive light",
       "2 IN 1-Touch Sensor activates auto-cycling mode with 256 stunning colors",
@@ -102,6 +105,7 @@
   {
     "id":4,
     "name":"Waterproof Floating Cellphone Case",
+    "summary_name": "Waterproof Floating Cellphone Case",
     "summary_features":[
       "Made of high density polyethylene with secure dual swivel lock and sealable closure clip",
       "Universal size fits all smartphones up to 5.5\", also credit card, wallet and money",
@@ -131,6 +135,7 @@
   {
     "id":5,
     "name":"500 Lumens Handheld Flashlight with Bike Mount Holder",
+    "summary_name": "LED Handheld FlashLight with Bike Mount",
     "summary_features":[
       "Mechanical rotating zoom system, more precise and studier, easy to adjust between spot and flood",
       "Bike mount holder included, easy switch between bike light and handheld LED Flashlight",
@@ -163,6 +168,7 @@
   {
     "id":6,
     "name":"3-Port USB 3.0 Hub and RJ45 10/100/1000 Gigabit Ethernet Hub Converter",
+    "summary_name":"USB 3.0 Hub with RJ45 Ethernet Converter",
     "summary_features":[
       "Provide USB3.0 ports and one RJ45 Gigabit Ethernet port supporting 10/100/1000Mbps Ethernet",
       "IEEE 802.3, 802.3u, and 802.3ab compatible. Supports full duplex operation with IEEE 802.3x flow control",
@@ -194,7 +200,8 @@
   },
   {
     "id":7,
-    "name":"Clip Desk Lamp Dimmable LED USB Reading Light",
+    "name":"Desk Lamp Dimmable LED USB Reading Light",
+    "summary_name": "Desk-Lamp Dimmable LED USB Reading Light",
     "summary_features":[
       "Humanized Design- Touch sensitive switch, 3-Level djustable brightness and intensity light which is soft and flicker-free, makes your eyes comfortable",
       "Multi Purpose- It can stand on desk with its own anti-skid base or can be cliped almost anywhere, such as bedframe, headboard, tables, computer desk, etc",
@@ -228,6 +235,7 @@
   {
     "id":8,
     "name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (white)",
+    "summary_name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (white)",
     "summary_features":[
       "Handy desk clamp LED lamp. Energy efficient and safe to use with low voltage wire",
       "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER",
@@ -261,6 +269,7 @@
   {
     "id":9,
     "name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (black)",
+    "summary_name":"Desk-Clamp LED Lamp with Touch-Sensitive Control (black)",
     "summary_features":[
       "Handy desk clamp LED lamp. Energy efficient and safe to use with low voltage wire",
       "LARGE & LABOR-SAVING STURDY clip as GREAT SPACE SAVER",
