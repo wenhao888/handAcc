@@ -15,6 +15,7 @@
     "ejs": "^2.5.5",
     "express": "~4.13.4",
     "express-ejs-layouts": "^2.2.0",
+    "express-mailer": "^0.3.1",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-mocha": "^3.0.1",
