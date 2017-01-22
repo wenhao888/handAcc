@@ -14,6 +14,11 @@ router.get("/contactUs", function(req, res, next) {
   res.render('user/contactUs', {layout:'layout/general'});
 });
 
+router.post("/contactUs", function(req, res, next) {
+    res.render('user/contactUs-confirm', {layout:'layout/general'});
+
+});
+
 router.get("/issue", function(req, res, next) {
     res.render('user/issue', {layout:'layout/general'});
 });
