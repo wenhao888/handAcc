@@ -20,13 +20,14 @@ function initialize(app) {
     singleton.app = app;
 }
 
-function sendContactUsEmail(keyValues) {
+function sendContactUsEmail(request) {
     singleton.app.mailer.send({
-        template: 'layout/contactUsEmail'
+        template: 'email/contactUs'
     }, {
         to: emailConfigure.systemEmailAccount,
-        subject: 'Test Email',
-        layout: false
+        subject: 'contactUs',
+        layout: false,
+        request:request
     }, function (err) {
 
     });

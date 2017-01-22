@@ -1,0 +1,37 @@
+<html>
+ <head>
+
+ </head>
+ <body>
+    <div style="width: 500px; margin:20px auto">
+        <h3>
+            ContactUs message from <%=request.user%>
+            <div>
+                <label>User: </label>
+                <p style="font-weight: lighter">
+                    <%=request.user%>
+                </p>
+            </div>
+            <div>
+                <label>Email: </label>
+                <p style="font-weight: lighter">
+                    <%=request.email%>
+                </p>
+            </div>
+            <div>
+                <label>Phone:</label>
+                <p style="font-weight: lighter">
+                    <%=request.phone%>
+                </p>
+            </div>
+
+            <div>
+                <label>Message:</label>
+                <p style="font-weight: lighter">
+                    <%=request.message%>
+                </p>
+            </div>
+        </h3>
+    </div>
+ </body>
+</html>
