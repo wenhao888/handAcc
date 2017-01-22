@@ -1,6 +1,6 @@
 var productService = require("./productService");
 var newProductIds =[
-    8,9,6,5,3
+    8,9,6,5,3,10
 ];
 
 

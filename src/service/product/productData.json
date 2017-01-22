@@ -298,5 +298,40 @@
     ],
     "buyUrl":"https://www.amazon.com/HandAcc-Interfaces-Flicker-Free-Temperature-Touch-Sensitive/dp/B01N9LAACO/ref=sr_1_3?ie=UTF8&qid=1484899656&sr=8-3&keywords=handacc&th=1",
     "hasTestingResult":false
+  },
+  {
+    "id":10,
+    "name":"LED Desk Gooseneck Tube Lamp with Touch Sensitive Control",
+    "summary_name":"LED Desk Gooseneck Tube Lamp with Touch Sensitive Control",
+    "summary_features":[
+      "Elegant and Simple Design with Flexible Gooseneck Anti-Flip Standard Basement",
+      "Eye-Protective, None Blue-Ray Surface Lighting Source, flicker-free and ghost-free lighting for reading/work/study",
+      "Adjustable 5 Dimming Modes (White, Yellow, Warm White, Cold White, Nature Light) and 5 Lighting Color Temperature Modes (range from 3000K-5500K), Easily Control by Touch Sensitive Panel with Memory Function",
+      "High Quality LED Bulb, using 48 LG5630 LED Light Bulb Combine as the Light Source. It passed the US LM80 luminous attenuation test",
+      "Life Time more than 50000 hours, special cooling system design make it more efficiency"
+    ],
+    "summary_image": "/images/products/10/1.jpg",
+    "features":[
+      "Elegant and Simple Design with Flexible Gooseneck Anti-Flip Standard Basement",
+      "Eye-Protective, None Blue-Ray Surface Lighting Source, flicker-free and ghost-free lighting for reading/work/study",
+      "Adjustable 5 Dimming Modes (White, Yellow, Warm White, Cold White, Nature Light) and 5 Lighting Color Temperature Modes (range from 3000K-5500K), Easily Control by Touch Sensitive Panel with Memory Function",
+      "High Quality LED Bulb, using 48 LG5630 LED Light Bulb Combine as the Light Source. It passed the US LM80 luminous attenuation test",
+      "Life Time more than 50000 hours, special cooling system design make it more efficiency"
+    ],
+    "dimension":"13.8 x 6 x 4.6 inches",
+    "oldPrice":"$47.99",
+    "price": "$27.99",
+    "images":[
+      "/images/products/10/1.jpg",
+      "/images/products/10/2.jpg",
+      "/images/products/10/3.jpg",
+      "/images/products/10/4.jpg",
+      "/images/products/10/5.jpg",
+      "/images/products/10/6.jpg",
+      "/images/products/10/7.jpg",
+      "/images/products/10/8.jpg"
+    ],
+    "buyUrl":"https://www.amazon.com/HandAcc-Gooseneck-Temperature-Sensitive-Certification/dp/B01G7XLBUG/ref=sr_1_7?ie=UTF8&qid=1485058986&sr=8-7&keywords=handacc",
+    "hasTestingResult":false
   }
 ]
