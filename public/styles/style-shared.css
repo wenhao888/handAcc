@@ -409,7 +409,8 @@ the menu bar has a left part and a right part
 }
 
 .visible-block {
-    display: block !important;
+    visibility: visible !important;
+    display: block;
 }
 
 .glyphicon-shopping-cart {
@@ -423,3 +424,11 @@ the menu bar has a left part and a right part
     color:darkred;
     text-decoration: line-through
 }
+
+.error-message {
+    padding:0;
+    margin:0;
+    padding-top: 3px;
+    color: darkred;
+}
+
