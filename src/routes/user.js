@@ -29,8 +29,6 @@ router.post("/contactUs", function(req, res, next) {
     request.message = req.body.message || "";
 
     emailService.sendContactUsEmail(request);
-
-
     res.redirect("contactUs-confirm");
 });
 
