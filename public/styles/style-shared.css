@@ -425,7 +425,7 @@ the menu bar has a left part and a right part
     text-decoration: line-through
 }
 
-.error-message {
+.input-error {
     padding:0;
     margin:0;
     padding-top: 3px;
