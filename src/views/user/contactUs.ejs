@@ -47,7 +47,7 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Your message <span class="text-danger">*</span> : </label>
             <div class="col-sm-12" >
-                <textarea  class="form-control" name="message" style="height:200px; resize: vertical" ng-model="message" required> </textarea>
+                <textarea  class="form-control" name="message" spellcheck="true" style="height:200px; resize: vertical" ng-model="message" required> </textarea>
 
                 <p class="input-error" ng-show="contactForm.message.$error.required && submitted" ng-bind="'required'">
                 </p>
