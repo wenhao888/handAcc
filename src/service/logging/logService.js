@@ -8,18 +8,18 @@ log4js.configure(
                     {
                         "type": "dateFile",
                         "filename": "logs/access.log",
-                        "pattern": "-yyyy-MM-dd",
+                        "pattern": "-MM-dd-yyyy",
                         "category": "http"
                     },
                     {
-                        "type": "file",
+                        "type": "dateFile",
                         "filename": "logs/app.log",
-                        "maxLogSize": 10485760,
-                        "numBackups": 3
+                        "pattern": "-MM-dd-yyyy",
                     },
                     {
                         "type": "logLevelFilter",
                         "level": "ERROR",
+                        "pattern": "-MM-dd-yyyy",
                         "appender": {
                             "type": "file",
                             "filename": "logs/errors.log"
