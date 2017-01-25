@@ -1,6 +1,19 @@
 <%-contentFor("content")%>
 <script src="/javascripts/user/issue-page.js"></script>
 
+<link rel="stylesheet" href="/vendor/angular-ui-select/dist/select.min.css"/>
+
+<script src="/vendor/angular-ui-select/dist/select.min.js"></script>
+<style>
+    .btn, .form-control {
+        padding-left: 3px;
+    }
+    .ui-select-bootstrap .ui-select-choices-row>span {
+        padding-left: 5px;
+    }
+
+
+</style>
 <div class="container" style="width:500px;">
     <h3 class="page-title">
         Report Product Issue
@@ -38,11 +51,14 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Priority</label>
             <div class="col-sm-4">
-                <select class="form-control" ng-model="priority" name="priority">
-                    <option value="normal"> Normal </option>
-                    <option value="high"   >High</option>
-                    <option value="urgent" >Urgent</option>
-                </select>
+                <ui-select ng-model="priority" theme="bootstrap" style="width: 200px">
+                    <ui-select-match>
+                        <span style="width:20px;" ng-class="{'bk-normal':$select.selected.id=='0','bk-high':$select.selected.id=='1','bk-urgent':$select.selected.id=='2' }"> &nbsp; &nbsp;  &nbsp;  </span>  <span ng-bind="$select.selected.title"></span>
+                    </ui-select-match>
+                    <ui-select-choices repeat="p in (priorities | filter: $select.search) track by p.id">
+                       <span style="width:20px;" ng-class="{'bk-normal':p.id=='0','bk-high':p.id=='1','bk-urgent':p.id=='2' }">  &nbsp; &nbsp;  &nbsp;</span> <span ng-bind="p.title"></span>
+                    </ui-select-choices>
+                </ui-select>
             </div>
         </div>
 

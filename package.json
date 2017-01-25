@@ -7,6 +7,7 @@
     "postinstall": "gulp build"
   },
   "dependencies": {
+    "angular-sanitize": "^1.6.1",
     "body-parser": "~1.15.1",
     "browserify-shim": "^3.8.12",
     "chai": "^3.5.0",
@@ -26,7 +27,8 @@
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.28.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "ui-select": "^0.19.6"
   },
   "devDependencies": {},
   "browserify": {
