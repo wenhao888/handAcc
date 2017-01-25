@@ -51,7 +51,8 @@
 
 
 .feature-list {
-    list-style-position: inside;
+    /*list-style-position: inside;*/
+    margin-left: auto;
     color:#949494;
 }
 
