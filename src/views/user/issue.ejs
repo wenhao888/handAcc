@@ -67,12 +67,16 @@
             <label class="control-label col-sm-4"> Product <span class="text-danger">*</span></label>
             <div class="col-sm-8">
 
-                <ui-select  ng-model="vm.selectedPriority" theme="select2" style="width:100%;">
+                <ui-select  ng-model="vm.selectedProduct" theme="select2" style="width:100%;">
                     <ui-select-match>
-                        <span style="width:20px;" ng-class="{'bk-normal':$select.selected.id=='0','bk-high':$select.selected.id=='1','bk-urgent':$select.selected.id=='2' }"> &nbsp; &nbsp;  &nbsp;  </span>  <span ng-bind="$select.selected.value"></span>
+                        <span ng-bind="$select.selected['summary_name']"></span>
                     </ui-select-match>
-                    <ui-select-choices repeat="p in vm.priorities | filter: $select.search track by p.value">
-                        <span style="width:20px;" ng-class="{'bk-normal':p.id==0,'bk-high':p.id==1,'bk-urgent':p.id==2 }">  &nbsp; &nbsp;  &nbsp;</span> <span ng-bind="p.value"></span>
+                    <ui-select-choices repeat="p in vm.products | filter: $select.search track by p.id">
+                        <div style="position: relative; min-height:40px;">
+                            <img ng-src="{{p.thumbnail}}" style="width: 40px; left:0; top:3px; position: absolute"/>
+                            <p ng-bind="p['summary_name']" style="margin-left: 44px;"></p>
+                        </div>
+
                     </ui-select-choices>
                 </ui-select>
 

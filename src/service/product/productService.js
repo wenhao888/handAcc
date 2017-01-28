@@ -19,7 +19,8 @@ function getProductsForDropDown(){
     return products.map(p=> {
         return {
             "id": p.id,
-            "summary_name": p.summary_name
+            "summary_name": p.summary_name,
+            "thumbnail":p.thumbnail
         }
     })
 }
