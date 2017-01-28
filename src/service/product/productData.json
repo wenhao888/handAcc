@@ -267,6 +267,7 @@
       "/images/products/8/6.jpg",
       "/images/products/8/7.jpg"
     ],
+    "thumbnail": "/images/products/8/thumbnail.jpg",
     "buyUrl":"https://www.amazon.com/HandAcc-Interfaces-Flicker-Free-Temperature-Touch-Sensitive/dp/B01N2XKCEX/ref=sr_1_3?ie=UTF8&qid=1484899656&sr=8-3&keywords=handacc",
     "hasTestingResult":false
   },
