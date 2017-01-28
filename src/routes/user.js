@@ -18,14 +18,12 @@ router.get("/contactUs", function(req, res, next) {
 router.post("/contactUs", function(req, res, next) {
     var request = {
         user: "",
-        email:"",
-        phone:"",
+        contact:"",
         message:""
 
     };
     request.user  = req.body.user  || "";
-    request.email = req.body.email || "";
-    request.phone = req.body.phone || "";
+    request.contact = req.body.contact || "";
     request.message = req.body.message || "";
 
     emailService.sendContactUsEmail(request);
