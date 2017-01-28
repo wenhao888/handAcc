@@ -1,5 +1,6 @@
 var angular= require("angular");
-var contactUs = angular.module("contactUs",[]);
+require("../shared/validators");
+var contactUs = angular.module("contactUs",["validators"]);
 
 contactUs.controller("contactUsController", ["$scope", function($scope) {
     $scope.submitted = false;
@@ -16,19 +17,4 @@ contactUs.controller("contactUsController", ["$scope", function($scope) {
         }
     };
 
-    $scope.$watch("email", function(value) {
-        $scope.contact= getUserContact(value, $scope.phone);
-    });
-
-
-    $scope.$watch("phone", function(value) {
-        $scope.contact= getUserContact($scope.email, value);
-    });
-
-    function getUserContact(email, phone) {
-        email = (email || "").trim();
-        phone = (phone || "").trim();
-
-        return email || phone;
-    }
 }]);
