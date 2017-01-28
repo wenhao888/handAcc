@@ -1,30 +1,31 @@
 var angular=require("angular");
-var issue=angular.module("issue",['ui.select', require('angular-sanitize')]);
+var issue=angular.module("issue",['ui.select']);
 
-issue.controller("issueController",["$scope", function ($scope) {
-    $scope.submitted = false;
-    $scope.priorities=[{
-        id:"0",
-        title:"normal"
+issue.controller("issueController", function () {
+    vm = this;
+    vm.submitted = false;
+
+    vm.priorities = [{
+        'id': 0,
+        'value': 'normal'
     }, {
-        id:"1",
-        title:"high"
+        'id': 1,
+        'value': 'high'
     }, {
-        id:"2",
-        title:"urgent"
+        'id': 2,
+        'value': 'urgent'
     }];
 
-    $scope.selected = $scope.priorities[0];
+    vm.selectedPriority = vm.priorities[0];
 
-
-    $scope.cancel =function () {
+    vm.cancel =function () {
         window.history.back();
     };
 
-    $scope.submit = function () {
+    vm.submit = function () {
         $scope.submitted =true;
     }
 
 
 
-}]);
+});

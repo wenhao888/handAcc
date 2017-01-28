@@ -19,11 +19,11 @@
         Report Product Issue
     </h3>
 
-    <form class="form-horizontal login-form" name="issueForm" ng-app="issue" ng-controller="issueController" novalidate="true">
+    <form class="form-horizontal login-form" name="issueForm" ng-app="issue" ng-controller="issueController as vm" novalidate="true">
         <div class="form-group">
             <label class="control-label col-sm-4">Your name <span class="text-danger">*</span></label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" name="name" ng-model="name" required/>
+                <input type="text" class="form-control" name="name" ng-model="vm.name" required/>
                 <p class="input-error" ng-show="issueForm.name.$error.required && submitted" ng-bind="'required'">
                 </p>
             </div>
@@ -32,7 +32,7 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Contact <span class="text-danger"> * </span></label>
             <div class="col-sm-8">
-                <input type="email" class="form-control" name="contact" ng-model="contact" placeholder="email/phone" required>
+                <input type="email" class="form-control" name="contact" ng-model="vm.contact" placeholder="email/phone" required>
                 <p class="input-error" ng-show="issueForm.contact.$error.required && submitted" ng-bind="'required'">
 
                 </p>
@@ -51,27 +51,21 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Priority</label>
             <div class="col-sm-4">
-                {{selected || jso}}
-
-
-                <ui-select ng-model="selected" theme="bootstrap" style="width: 200px">
+                <ui-select  ng-model="vm.selectedPriority" theme="bootstrap" style="width: 200px">
                     <ui-select-match>
-                        <span style="width:20px;" ng-class="{'bk-normal':$select.selected.id=='0','bk-high':$select.selected.id=='1','bk-urgent':$select.selected.id=='2' }"> &nbsp; &nbsp;  &nbsp;  </span>  <span ng-bind="$select.selected.title"></span>
+                        <span style="width:20px;" ng-class="{'bk-normal':$select.selected.id=='0','bk-high':$select.selected.id=='1','bk-urgent':$select.selected.id=='2' }"> &nbsp; &nbsp;  &nbsp;  </span>  <span ng-bind="$select.selected.value"></span>
                     </ui-select-match>
-                    <ui-select-choices repeat="p in (priorities | filter: $select.search) track by p.id">
-                       <span style="width:20px;" ng-class="{'bk-normal':p.id=='0','bk-high':p.id=='1','bk-urgent':p.id=='2' }">  &nbsp; &nbsp;  &nbsp;</span> <span ng-bind="p.title"></span>
+                    <ui-select-choices repeat="p in vm.priorities | filter: $select.search track by p.value">
+                        <span style="width:20px;" ng-class="{'bk-normal':p.id==0,'bk-high':p.id==1,'bk-urgent':p.id==2 }">  &nbsp; &nbsp;  &nbsp;</span> <span ng-bind="p.value"></span>
                     </ui-select-choices>
                 </ui-select>
-
-
             </div>
-
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-4"> Your message <span class="text-danger">*</span></label>
             <div class="col-sm-12" >
-                <textarea  class="form-control" name="message" style="height:200px; resize: vertical" ng-model="message" required> </textarea>
+                <textarea  class="form-control" name="message" style="height:200px; resize: vertical" ng-model="vm.message" required> </textarea>
                 <p class="input-error" ng-show="issueForm.message.$error.required && submitted" ng-bind="'required'">
                 </p>
             </div>
@@ -80,8 +74,8 @@
 
         <div class="form-group">
             <div class="col-sm-8 col-sm-offset-4">
-                <button class="btn btn-sm btn-warning" ng-click="cancel()"> Cancel </button>
-                <button class="btn btn-sm btn-primary" ng-click="submit()"> Submit </button>
+                <button class="btn btn-sm btn-warning" ng-click="vm.cancel()"> Cancel </button>
+                <button class="btn btn-sm btn-primary" ng-click="vm.submit()"> Submit </button>
             </div>
         </div>
 
