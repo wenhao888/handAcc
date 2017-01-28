@@ -15,7 +15,19 @@ function getAll() {
 }
 
 
+function getProductsForDropDown(){
+    return products.map(p=> {
+        return {
+            "id": p.id,
+            "summary_name": p.summary_name,
+            "thumbnail":p.thumbnail
+        }
+    })
+}
+
+
 module.exports = {
     getProduct: getProduct,
-    getAll:getAll
+    getAll:getAll,
+    getProductsForDropDown:getProductsForDropDown
 };

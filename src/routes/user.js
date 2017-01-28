@@ -1,5 +1,6 @@
 var express = require('express');
 var emailService = require("../service/email/emailService");
+var productService = require("../service/product/productService");
 var router = express.Router();
 
 /* GET users listing. */
@@ -35,7 +36,8 @@ router.get("/contactUs-confirm", function(req, res, next) {
 });
 
 router.get("/issue", function(req, res, next) {
-    res.render('user/issue', {layout:'layout/general'});
+    var products = productService.getProductsForDropDown();
+    res.render('user/issue', {layout:'layout/general', products: products});
 });
 
 module.exports = router;
