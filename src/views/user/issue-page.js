@@ -1,5 +1,7 @@
 var angular=require("angular");
-var issue=angular.module("issue",['ui.select']);
+require("../shared/validators");
+
+var issue=angular.module("issue",['ui.select',"validators"]);
 
 issue.controller("issueController", function () {
     vm = this;
@@ -23,7 +25,7 @@ issue.controller("issueController", function () {
     };
 
     vm.submit = function () {
-        $scope.submitted =true;
+        vm.submitted =true;
     }
 
 
