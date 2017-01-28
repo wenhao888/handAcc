@@ -12,6 +12,11 @@ function validatePhone(value){
 
 
 function validateContact (value) {
+    value = (value || "").trim();
+    if (value == '') {
+        return true;
+    }
+
     return validateEmail(value) || validatePhone(value);
 }
 

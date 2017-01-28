@@ -36,5 +36,11 @@ describe("test contact validator", function () {
     it("valid phone --- case 2", function() {
         var result = validator.validateContact("(406)-209-1297");
         assert.equal(true, result);
+    });
+
+    it("empty is valid", function() {
+        var result = validator.validateContact("    ");
+        assert.equal(true, result);
     })
+
 });
