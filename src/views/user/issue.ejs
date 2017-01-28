@@ -2,9 +2,10 @@
 <script src="/javascripts/user/issue-page.js"></script>
 
 <link rel="stylesheet" href="/vendor/angular-ui-select/dist/select.min.css"/>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
 <script src="/vendor/angular-ui-select/dist/select.min.js"></script>
 <style>
+
     .btn, .form-control {
         padding-left: 3px;
     }
@@ -12,6 +13,25 @@
         padding-left: 5px;
     }
 
+    .select2 > .select2-choice.ui-select-match {
+        /* Because of the inclusion of Bootstrap */
+        height: 34px;
+    }
+
+    .selectize-control > .selectize-dropdown {
+        top: 36px;
+    }
+    /* Some additional styling to demonstrate that append-to-body helps achieve the proper z-index layering. */
+    .select-box {
+        background: #fff;
+        position: relative;
+        z-index: 1;
+    }
+    .alert-info.positioned {
+        margin-top: 1em;
+        position: relative;
+        z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
+    }
 
 </style>
 <div class="container" style="width:500px;">
@@ -44,7 +64,18 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Product <span class="text-danger">*</span></label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" name="product">
+
+                <ui-select  ng-model="vm.selectedPriority" theme="select2" style="width:100%;">
+                    <ui-select-match>
+                        <span style="width:20px;" ng-class="{'bk-normal':$select.selected.id=='0','bk-high':$select.selected.id=='1','bk-urgent':$select.selected.id=='2' }"> &nbsp; &nbsp;  &nbsp;  </span>  <span ng-bind="$select.selected.value"></span>
+                    </ui-select-match>
+                    <ui-select-choices repeat="p in vm.priorities | filter: $select.search track by p.value">
+                        <span style="width:20px;" ng-class="{'bk-normal':p.id==0,'bk-high':p.id==1,'bk-urgent':p.id==2 }">  &nbsp; &nbsp;  &nbsp;</span> <span ng-bind="p.value"></span>
+                    </ui-select-choices>
+                </ui-select>
+
+
+                <input type="text" class="form-control" name="product" style="display: none;">
 
             </div>
         </div>
