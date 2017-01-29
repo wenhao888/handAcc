@@ -1,32 +1,42 @@
 <html>
  <head>
+    <style type="text/css">
+        .field:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+        .label {
+            width:100px;
+        }
 
+    </style>
  </head>
  <body>
     <div style="width: 500px; margin:20px auto">
         <h3>
             ContactUs message from <%=request.user%>
-            <div>
-                <label>User: </label>
-                <p style="font-weight: lighter">
-                    <%=request.user%>
-                </p>
-            </div>
-            <div>
-                <label>Contact: </label>
-                <p style="font-weight: lighter">
-                    <%=request.contact%>
-                </p>
-            </div>
-
-
-            <div>
-                <label>Message:</label>
-                <p style="font-weight: lighter">
-                    <%=request.message%>
-                </p>
-            </div>
         </h3>
+
+        <div class="field">
+            <label class="label">User: </label>
+            <span style="font-weight: lighter">
+                    <%=request.user%>
+            </span>
+        </div>
+
+        <div class="field">
+            <label class="label">Contact: </label>
+            <span style="font-weight: lighter">
+                    <%=request.contact%>
+            </span>
+        </div>
+
+
+        <div class="field">
+            <label>Message:</label>
+            <p style="font-weight: lighter; padding:0; maring:0; margin-top: 6px">
+                <%=request.message%>
+            </p>
+        </div>
     </div>
  </body>
 </html>
