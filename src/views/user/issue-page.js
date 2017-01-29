@@ -24,10 +24,12 @@ issue.controller("issueController", function () {
         window.history.back();
     };
 
-    vm.submit = function () {
+    vm.submit = function (valid, $event) {
         vm.submitted =true;
+
+        if (!valid) {
+            $event.preventDefault();
+        }
     }
-
-
 
 });

@@ -33,7 +33,21 @@ function sendContactUsEmail(request) {
     });
 }
 
+function sendProductIssueEmail(request) {
+    singleton.app.mailer.send({
+        template: 'email/productIssue'
+    }, {
+        to: emailConfigure.systemEmailAccount,
+        subject: 'product issue',
+        layout: false,
+        request:request
+    }, function (err) {
+
+    });
+}
+
 module.exports= {
     initialize: initialize,
-    sendContactUsEmail: sendContactUsEmail
+    sendContactUsEmail: sendContactUsEmail,
+    sendProductIssueEmail: sendProductIssueEmail
 };
