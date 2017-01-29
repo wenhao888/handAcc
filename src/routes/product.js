@@ -4,9 +4,9 @@ var productService = require("../service/product/productService");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/list', function(req, res, next) {
+router.post('/search', function(req, res, next) {
     var products = productService.getAll();
-    res.render('product/list', {layout:'layout/general', products: products});
+    res.render('product/search', {layout:'layout/general', products: products});
 });
 
 router.get('/:id/detail', function(req,res,next) {
