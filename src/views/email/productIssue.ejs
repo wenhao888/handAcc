@@ -1,0 +1,46 @@
+<html>
+<head>
+
+</head>
+<body>
+<div style="width: 500px; margin:20px auto">
+    <h3>
+        Product issue message from <%=request.user%>
+        <div>
+            <label>User: </label>
+            <p style="font-weight: lighter">
+                <%=request.user%>
+            </p>
+        </div>
+        <div>
+            <label>Contact: </label>
+            <p style="font-weight: lighter">
+                <%=request.contact%>
+            </p>
+        </div>
+
+        <div>
+            <label>Product:</label>
+            <p style="font-weight: lighter">
+                <%=request.product%>
+            </p>
+        </div>
+
+
+        <div>
+            <label>Priority:</label>
+            <p style="font-weight: lighter">
+                <%=request.priority%>
+            </p>
+        </div>
+
+        <div>
+            <label>Message:</label>
+            <p style="font-weight: lighter">
+                <%=request.message%>
+            </p>
+        </div>
+    </h3>
+</div>
+</body>
+</html>

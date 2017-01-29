@@ -1,9 +1,9 @@
 var angular=require("angular");
 
-var contactConfirm= angular.module("contactConfirm",[]);
+var confirm = angular.module("confirm",[]);
 
 
-contactConfirm.controller("contactConfirmController",["$scope", function($scope) {
+confirm.controller("confirmController",["$scope", function($scope) {
     $scope.close = function() {
         if (typeof document.referrer !='undefined' && document.referrer) {
             //if come from the contactUs page

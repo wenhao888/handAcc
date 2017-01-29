@@ -20,7 +20,8 @@ function getProductsForDropDown(){
         return {
             "id": p.id,
             "summary_name": p.summary_name,
-            "thumbnail":p.thumbnail
+            "thumbnail":p.thumbnail,
+            'identity': p.summary_name +" [" + p.id +"]"
         }
     })
 }

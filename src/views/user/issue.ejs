@@ -40,13 +40,14 @@
     </h3>
 
     <form class="form-horizontal login-form" name="issueForm" ng-app="issue" ng-controller="issueController as vm" novalidate="true"
-            ng-init="vm.products=<%=JSON.stringify(products)%>">
+            ng-init="vm.products=<%=JSON.stringify(products)%>"
+            action="/users/issue" method="post">
 
         <div class="form-group">
             <label class="control-label col-sm-4">Your name <span class="text-danger">*</span></label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" name="name" ng-model="vm.name" required/>
-                <p class="input-error" ng-show="issueForm.name.$error.required && vm.submitted" ng-bind="'required'">
+                <input type="text" class="form-control" name="user" ng-model="vm.user" required/>
+                <p class="input-error" ng-show="issueForm.user.$error.required && vm.submitted" ng-bind="'required'">
                 </p>
             </div>
         </div>
@@ -54,7 +55,7 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Contact <span class="text-danger"> * </span></label>
             <div class="col-sm-8">
-                <input type="email" class="form-control contact-validator"  name="contact" ng-model="vm.contact" placeholder="email/phone" required>
+                <input type="text" class="form-control contact-validator"  name="contact" ng-model="vm.contact" placeholder="email/phone" required>
                 <p class="input-error" ng-show="issueForm.contact.$error.required && vm.submitted" ng-bind="'required'">
                 </p>
                 <p class="input-error" ng-show="issueForm.contact.$error.contact && vm.submitted" ng-bind="'invalid email/phone'">
@@ -76,12 +77,13 @@
                             <img ng-src="{{p.thumbnail}}" style="width: 40px; left:0; top:3px; position: absolute"/>
                             <p ng-bind="p['summary_name']" style="margin-left: 44px;"></p>
                         </div>
-
                     </ui-select-choices>
                 </ui-select>
 
+                <input type="text" class="form-control" name="product" ng-model="vm.selectedProduct.identity" required style="display: none;">
 
-                <input type="text" class="form-control" name="product" style="display: none;">
+                <p  class="input-error"  ng-show="issueForm.product.$error.required && vm.submitted" ng-bind="'required'">
+                </p>
 
             </div>
         </div>
@@ -115,7 +117,7 @@
         <div class="form-group">
             <div class="col-sm-8 col-sm-offset-4">
                 <button class="btn btn-sm btn-warning" ng-click="vm.cancel()"> Cancel </button>
-                <button class="btn btn-sm btn-primary" ng-click="vm.submit()"> Submit </button>
+                <button class="btn btn-sm btn-primary" ng-click="vm.submit(issueForm.$valid, $event)"> Submit </button>
             </div>
         </div>
 
