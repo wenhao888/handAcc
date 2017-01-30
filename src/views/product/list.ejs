@@ -25,9 +25,14 @@
 
                 </div>
                 <div class="product-price">
-                    <span ng-bind="p.oldPrice" class="overridden-Price"></span>
-                    <span> &nbsp; &nbsp;
-                </span>
+                    <div class="invisible product-preview-cart" style="margin-right: 15px;">
+                        <a href="{{p.buyUrl}}">
+                            <span class="glyphicon glyphicon-shopping-cart" style="font-size:1.3em" ></span>
+                        </a>
+                    </div>
+
+                    <span ng-bind="p.oldPrice" class="overridden-Price" style="margin-right: 15px;"></span>
+
                     <span class="price" ng-bind="p.price"></span>
                 </div>
             </div>

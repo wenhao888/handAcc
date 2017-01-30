@@ -52,3 +52,9 @@
 .product-preview:hover .product-preview__info {
     padding: 50px 30px 40px 30px;
 }
+
+.product-preview-wrapper:hover .product-preview-cart{
+    display:    inline-block !important;
+    visibility: visible !important;
+}
+
