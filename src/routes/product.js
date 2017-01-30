@@ -19,4 +19,9 @@ router.get('/download', function(req, res, next) {
     res.render('product/download', {layout:'layout/general'});
 });
 
+router.get("/list", function(req,res, next) {
+    var products = productService.getAll();
+    res.render('product/list', {layout:'layout/general', products: products});
+});
+
 module.exports = router;
