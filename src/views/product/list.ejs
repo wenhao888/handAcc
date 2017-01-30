@@ -1,0 +1,36 @@
+<%- contentFor("content") %>
+
+<link rel="stylesheet" href="/styles/style-product-preview-image.css"/>
+<link rel="stylesheet" href="/styles/style-product-preview-slick.css"/>
+<link rel="stylesheet" href="/styles/style-product.css"/>
+
+<script src="/javascripts/product/list-page.js"></script>
+
+<div class="container" ng-app="list" ng-controller="listController"
+     ng-init="products=<%=JSON.stringify(products)%>">
+
+    <h3 class="page-title">
+        All Products
+    </h3>
+
+    <div class="product-preview-wrapper" style="width: 285px; height:420px" ng-repeat="p in products">
+        <div class="product-preview">
+            <div class="product-preview__image">
+                <a href="/products/{{p.id}}/detail">
+                    <img ng-src="{{p['summary_image']}}" style="width:100%;"> </img>
+                </a>
+            </div>
+            <div class="product-preview__info">
+                <div class="product-title" ng-bind="p['summary_name']">
+
+                </div>
+                <div class="product-price">
+                    <span ng-bind="p.oldPrice" class="overridden-Price"></span>
+                    <span> &nbsp; &nbsp;
+                </span>
+                    <span class="price" ng-bind="p.price"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
