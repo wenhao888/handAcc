@@ -8,6 +8,11 @@ var email = {
 
 };
 
+var elastic = {
+   "url": process.env["elasticUrl"]
+};
+
 module.exports = {
-    'email': email
+    'email': email,
+    'elastic': elastic
 };
