@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "angular-sanitize": "^1.6.1",
+    "async": "^2.1.4",
     "body-parser": "~1.15.1",
     "browserify-shim": "^3.8.12",
     "chai": "^3.5.0",
@@ -26,6 +27,7 @@
     "morgan": "~1.7.0",
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
+    "request": "^2.79.0",
     "sequelize": "^3.28.0",
     "serve-favicon": "~2.3.0",
     "ui-select": "^0.19.6",
