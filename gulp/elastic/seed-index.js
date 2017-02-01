@@ -3,7 +3,7 @@ var request=require("request");
 var path=require("path");
 var productService = require(path.resolve("./src/service/product/productService"));
 var async = require("async");
-var stringHelp = require(path.resolve("./src/lib/help/stringHelp"));
+var stringHelp = require(path.resolve("./src/service/help/stringHelp"));
 var elastic = require(path.resolve("./src/config/configureService")).elastic;
 
 

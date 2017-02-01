@@ -4,9 +4,20 @@ var productService = require("../service/product/productService");
 var router = express.Router();
 
 /* GET users listing. */
-router.post('/search', function(req, res, next) {
+router.get('/search', function(req, res, next) {
+    var keyword= req.query.keyword || "";
+    if (keyword.trim() == '') {
+        res.redirect("/products/list")
+        return;
+    }
+
+
     var products = productService.getAll();
-    res.render('product/search', {layout:'layout/general', products: products});
+    var condition= {
+        products: products,
+        keyword:keyword
+    };
+    res.render('product/search', {layout:'layout/general', condition: condition});
 });
 
 router.get('/:id/detail', function(req,res,next) {

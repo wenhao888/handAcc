@@ -32,9 +32,9 @@
    <%-include ../partial/headLineWithLogin.ejs%>
     <div class="header-search">
         <div class="container">
-            <form class="header-search-form" action="/products/search" method="post">
+            <form class="header-search-form" action="/products/search" method="get">
                 <div style="display: inline-block" class="input-group">
-                    <input type="text" style="display: block" placeholder="search ..."> </input>
+                    <input type="text" style="display: block" name="keyword" placeholder="search ..."> </input>
                     <span class="input-group__bar"></span>
                 </div>
 
