@@ -7,14 +7,28 @@
 <script src="/javascripts/product/search-page.js"></script>
 
 <div class="container" ng-app="search" ng-controller="searchController"
-     ng-init="products=<%=JSON.stringify(products)%>"
-    >
-    <h3 class="page-title" style="text-align: center">
-        All Products
+     ng-init="condition=<%=JSON.stringify(condition)%>; ">
+    <h3 class="page-title" style="margin-bottom: -20px;" >
+        Search results
     </h3>
 
+    <div style="text-align: right">
+        <form class="header-search-form" action="/products/search" method="get">
+            <div style="display: inline-block" class="input-group">
+                <input type="text" style="display: block" name="keyword" ng-model="condition.keyword" placeholder="search ..."> </input>
+                <span class="input-group__bar"></span>
+            </div>
+
+            <button type="submit" class="text-uppercase" style="box-shadow: none;">
+                <svg>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
+
     <div>
-        <div class="product-wrapper" ng-repeat="p in products">
+        <div class="product-wrapper" ng-repeat="p in condition.products">
             <div class="product-image-wrapper">
                 <div class="product-preview__image" style="padding-top: 0">
                     <a>
@@ -49,11 +63,11 @@
 
                 <div>
                     <a href="/products/{{p.id}}/detail">
-                        more details ...
+                        ...
                     </a>
                     &nbsp;&nbsp;&nbsp;
                     <a href="{{p.buyUrl}}">
-                        <span class="glyphicon glyphicon-shopping-cart" ></span>
+                        <span class="glyphicon glyphicon-shopping-cart" style="font-size:1.3em"></span>
                     </a>
                 </div>
 
