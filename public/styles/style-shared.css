@@ -163,6 +163,12 @@ the menu bar has a left part and a right part
     vertical-align: top;
 }
 
+.header-search-form button span {
+    width:15px;
+    height:18px;
+    font-size:1.154em;
+}
+
 .input-group__bar {
     position: relative;
     display: block;
@@ -201,7 +207,6 @@ the menu bar has a left part and a right part
 .header-search-form button {
     border: 0px none #FFF;
     box-sizing: border-box;
-    color: #FFF;
     cursor: pointer;
     display: inline-block;
     height: 40px;
