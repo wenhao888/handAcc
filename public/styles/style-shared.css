@@ -138,6 +138,12 @@ the menu bar has a left part and a right part
     font-size: 1.154em;
 }
 
+
+.header-search-form-wrapper {
+    font-size:1.154em;
+}
+
+
 .header-search-form {
     display: inline-block;
     width: auto;
@@ -166,7 +172,6 @@ the menu bar has a left part and a right part
 .header-search-form button span {
     width:15px;
     height:18px;
-    font-size:1.154em;
 }
 
 .input-group__bar {
