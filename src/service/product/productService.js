@@ -45,14 +45,14 @@ function searchProductsByKeyword(keyword) {
                         must: {
                             "multi_match": {
                                 "query": keyword,
-                                "fields": ["summary_name"]
+                                "fields": ["name"]
                             }
                         },
                         should: [{
                             "multi_match" : {
                                 "query" : keyword,
                                 "type" : "phrase_prefix",
-                                "fields": ["summary_name"]
+                                "fields": ["name"]
                             }
                         }]
                     }
