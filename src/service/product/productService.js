@@ -33,16 +33,30 @@ function getProductsForDropDown() {
 
 
 function searchProductsByKeyword(keyword) {
+    var keyword=keyword.trim();
+
     var url = stringHelp.format("{0}/handacc/products/_search", elastic.url);
     return new Promise(function(resolve, reject) {
         request.post({
             url:url,
             json: {
                 "query": {
-                    "multi_match": {
-                        "query": keyword,
-                        "fields": ["summary_name","summary_features","name","features"]
-                    },
+                    bool: {
+                        must: {
+                            "multi_match": {
+                                "query": keyword,
+                                "fields": ["summary_name^2","name^2","features"],
+                                "minimum_should_match": "30%"
+                            }
+                        },
+                        should: [{
+                            "multi_match" : {
+                                "query" : keyword,
+                                "type" : "phrase_prefix",
+                                "fields": ["summary_name^2","name^2","features"]
+                            }
+                        }]
+                    }
                 }
             }
         }, function (error, response, body) {
