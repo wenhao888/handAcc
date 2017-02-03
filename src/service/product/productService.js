@@ -45,15 +45,14 @@ function searchProductsByKeyword(keyword) {
                         must: {
                             "multi_match": {
                                 "query": keyword,
-                                "fields": ["summary_name^2","name^2","features"],
-                                "minimum_should_match": "30%"
+                                "fields": ["summary_name","name"],
                             }
                         },
                         should: [{
                             "multi_match" : {
                                 "query" : keyword,
                                 "type" : "phrase_prefix",
-                                "fields": ["summary_name^2","name^2","features"]
+                                "fields": ["summary_name","name"]
                             }
                         }]
                     }
