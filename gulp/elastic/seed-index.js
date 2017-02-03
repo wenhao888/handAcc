@@ -65,10 +65,12 @@ gulp.task("seed-products", function(gCallBack) {
 
 gulp.task("list-products", function(callBack) {
     var url =stringHelp.format("{0}/handacc/products/_search?pretty", elastic.url);
-    request.post(url,  {
-        "query":
-        {
-            "match_all": {}
+    request.post({
+        url:url,
+        json: {
+            "query": {
+                "match_all": {}
+            }
         }
     }, function (error, response, body) {
         if (error) {
