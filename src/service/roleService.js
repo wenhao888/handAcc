@@ -1,5 +1,5 @@
-var db = require("../model/index");
-var Role = db.Role;
+var models = require("../model/index");
+var Role = models.Role;
 
 function create(role) {
    return Role.create(role);
