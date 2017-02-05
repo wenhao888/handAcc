@@ -1,9 +1,10 @@
 var gulp = require("gulp");
-var db=require("../src/model");
+require("../src/model");
+var sequelize = require("../src/service/db/sequelize");
 
 
 gulp.task("db-schema", function(callBack) {
-    db.sequelize.sync({force:true}).then(function() {
+    sequelize.sync({force:true}).then(function() {
         console.log("db schema was created successfully");
         callBack(null);
     }, function(error) {
