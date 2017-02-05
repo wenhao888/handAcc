@@ -1,6 +1,8 @@
 var gulp = require("gulp");
 require("../src/model");
+
 var sequelize = require("../src/service/db/sequelize");
+
 
 
 gulp.task("db-schema", function(callBack) {
