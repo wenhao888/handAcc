@@ -1,5 +1,7 @@
+var Sequelize = require("sequelize");
+var sequelize = require("../service/db/sequelize");
 
-function define_model(Sequelize, sequelize) {
+function defineModel() {
     var Role = sequelize.define('Role', {
         name: Sequelize.STRING,
         comment: Sequelize.TEXT
@@ -12,6 +14,6 @@ function define_model(Sequelize, sequelize) {
 }
 
 module.exports= {
-    "define": define_model
+    "defineModel": defineModel
 };
 

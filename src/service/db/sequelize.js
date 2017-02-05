@@ -1,9 +1,8 @@
-var Sequelize  = require("sequelize");
-var dbUrl      = process.env.DATABASE_URL;
 
-if (!dbUrl) {
-    dbUrl = require("../env/devEnv").DATABASE_URL;
-}
+var Sequelize  = require("sequelize");
+
+var dbUrl = require("../../config/configureService").db.POSTGRES_URL;
+
 
 var sequelize  = new Sequelize(dbUrl, {
     dialect: 'postgres',
@@ -22,7 +21,4 @@ var sequelize  = new Sequelize(dbUrl, {
 
 
 
-module.exports = {
-    Sequelize: Sequelize,
-    sequelize: sequelize
-};
+module.exports = sequelize;
