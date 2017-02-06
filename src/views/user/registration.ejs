@@ -53,14 +53,14 @@
 
                     <div ng-password-strength="reg.password"   class="input-password-strength" style="margin-top: 3px;"  strength="passStrength" inner-class="progress-bar" inner-class-prefix="progress-bar-"></div>
 
-                    <div style="position: absolute; left:0; top:2px; width:100%; text-align: center; font-weight: lighter" ng-bind="passStrength">
+                    <div style="position: absolute; left:0; top:2px; width:100%; text-align: center; font-weight: lighter" ng-bind="formatStrength(passStrength)">
                     </div>
 
                 </div>
 
                 <input type="text" class="password-strength-validator" name="strength" ng-model="passStrength" style="display: none"/>
 
-                <p  class="input-error" ng-show="regForm.strength.$error.strength" ng-bind="'password is too weak'">
+                <p  class="input-error" ng-show="regForm.strength.$error.strength && submitted" ng-bind="'password is too weak'">
                 </p>
 
             </div>

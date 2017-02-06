@@ -15,6 +15,11 @@ reg.controller("registrationController",["$scope", function ($scope) {
       if (!valid) {
           $event.preventDefault();
       }
+    };
+
+    $scope.formatStrength=function(value) {
+        var value = typeof value == 'undefined' ? 0: value;
+       return "strength: " + value;
     }
 
 }]);
