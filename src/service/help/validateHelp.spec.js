@@ -1,8 +1,7 @@
-
-var validator = require("./validateContact");
+var validator = require("./validationHelp");
 var assert=require("chai").assert;
 
-describe("test contact validator", function () {
+describe("test  validationHelp", function () {
     it("valid email", function() {
         var result = validator.validateContact("wenhao.lin@gmail.com");
         assert.equal(true, result);
@@ -38,9 +37,9 @@ describe("test contact validator", function () {
         assert.equal(true, result);
     });
 
-    it("empty is valid", function() {
+    it("empty is invalid", function() {
         var result = validator.validateContact("    ");
-        assert.equal(true, result);
+        assert.equal(false, result);
     })
 
 });
