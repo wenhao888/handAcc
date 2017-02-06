@@ -414,6 +414,14 @@ the menu bar has a left part and a right part
     margin-bottom: 20px;
 }
 
+.session {
+    width: 1170px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+
 .invisible {
     display: none;
 }
