@@ -1,7 +1,7 @@
 var angular= require("angular");
 require("../shared/validators");
 
-var reg= angular.module("registration",["validators"]);
+var reg= angular.module("registration",["validators","ngPasswordStrength"]);
 
 reg.controller("registrationController",["$scope", function ($scope) {
 
