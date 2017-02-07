@@ -12,7 +12,6 @@ validators.directive("passwordStrengthValidator",function() {
             //For DOM -> model validation
             ngModel.$parsers.unshift(function(value) {
                 var strength = getStrengthValue(value);
-                console.log(strength);
                 ngModel.$setValidity('strength', strength>=50);
                 return value;
             });
@@ -28,7 +27,7 @@ validators.directive("passwordStrengthValidator",function() {
 });
 
 function getStrengthValue(value) {
-    if (typeof value == 'undefined') {
+    if (typeof value == 'undefined' || value=='') {
         return 0
     } else {
         return value;

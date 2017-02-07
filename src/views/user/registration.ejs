@@ -62,7 +62,6 @@
 
                 <p  class="input-error" ng-show="regForm.strength.$error.strength && submitted" ng-bind="'password is too weak'">
                 </p>
-
             </div>
         </div>
 
@@ -70,7 +69,9 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Confirm password   <span class="text-danger">*</span> </label>
             <div class="col-sm-8">
-                <input type="password" class="form-control" name="confirmPassword" ng-model="reg.confirmPassword">
+                <input type="password" class="form-control confirm-password-validator" password="{{reg.password}}" name="confirmPassword" ng-model="reg.confirmPassword">
+                <p  class="input-error" ng-show="regForm.confirmPassword.$error.match && submitted" ng-bind="'does not match password'">
+                </p>
             </div>
         </div>
 
