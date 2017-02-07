@@ -6,14 +6,14 @@ describe("test role validator", function () {
         var result = roleValidator.validate();
 
         assert.equal(false, result.isValid);
-        assert.equal("role name can't be blank", result.error);
+        assert.equal("role name can't be blank", result.errors[0]);
     });
 
     it("validate null role", function () {
         var result = roleValidator.validate(null);
 
         assert.equal(false, result.isValid);
-        assert.equal("role name can't be blank", result.error);
+        assert.equal("role name can't be blank", result.errors[0]);
     });
 
     it("role name can't blank", function () {
@@ -22,7 +22,7 @@ describe("test role validator", function () {
         });
 
         assert.equal(false, result.isValid);
-        assert.equal("role name can't be blank", result.error);
+        assert.equal("role name can't be blank", result.errors[0]);
     });
 
     it("simple valid role", function () {
