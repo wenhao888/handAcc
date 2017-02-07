@@ -1,4 +1,4 @@
-var models = require("../model/index");
+var models = require("../../models");
 var Role = models.Role;
 
 function create(role) {

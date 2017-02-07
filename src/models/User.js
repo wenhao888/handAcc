@@ -1,7 +1,6 @@
 var Sequelize = require("sequelize");
-var sequelize = require("../service/db/sequelize");
 
-function defineModel() {
+function defineModel(sequelize) {
     var User = sequelize.define('User', {
         email:     {type: Sequelize.STRING, allowNull: false, unique:true},
         password:  {type: Sequelize.STRING, allowNull: false},
