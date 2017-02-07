@@ -1,5 +1,5 @@
-var model= require("../../model");
-var User= model.User;
+var models= require("../../models");
+var User= models.User;
 
 
 /**

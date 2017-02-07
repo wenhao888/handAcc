@@ -1,7 +1,7 @@
 
 var Sequelize  = require("sequelize");
 
-var dbUrl = require("../../config/configureService").db.POSTGRES_URL;
+var dbUrl = require("../config/configureService").db.POSTGRES_URL;
 
 
 var sequelize  = new Sequelize(dbUrl, {
@@ -21,4 +21,13 @@ var sequelize  = new Sequelize(dbUrl, {
 
 
 
-module.exports = sequelize;
+
+/**
+ * export db for other module to use
+ */
+module.exports = {
+    sequelize: sequelize,
+    Role: require("./Role").defineModel(sequelize),
+    User: require("./User").defineModel(sequelize)
+};
+
