@@ -9,6 +9,7 @@ validators= angular.module("validators",[]);
 require("./contactValidator");
 require("./phoneValidator");
 require("./passwordStrengthValidator");
+require("./confirmPasswordValidator");
 
 
 
