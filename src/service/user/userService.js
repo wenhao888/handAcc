@@ -8,7 +8,7 @@ var User= models.User;
  * @param email
  * @returns {Promise}
  */
-function searUserByEmail(email) {
+function getUserByEmail(email) {
     var email = (email || "").toLowerCase().trim();
 
     return new Promise(function(resolve, reject) {
@@ -63,7 +63,7 @@ function getUserById(id) {
 
 
 module.exports = {
-    searUserByEmail:searUserByEmail,
+    getUserByEmail:getUserByEmail,
     createUser: createUser,
     getUserById: getUserById
 };

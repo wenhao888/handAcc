@@ -22,7 +22,7 @@ describe("test userService", function() {
 
 
     it("test searUserByEmail --- found", function(done) {
-        userService.searUserByEmail("wenhao.lin@gmail.com").then(function(user) {
+        userService.getUserByEmail("wenhao.lin@gmail.com").then(function(user) {
             assert.equal("wenhao.lin@gmail.com", user.email);
             done();
         }, function(error) {
@@ -33,12 +33,25 @@ describe("test userService", function() {
 
 
     it("test searUserByEmail --- not exist", function(done) {
-        userService.searUserByEmail("notexist@gmail.com").then(function(user) {
+        userService.getUserByEmail("notexist@gmail.com").then(function(user) {
             assert.equal(null, user);
             done();
         }, function(error) {
             done(error);
         })
+
+    });
+
+
+    it("test getUserById --- found", function(done) {
+        userService.getUserById(1).then(function(user) {
+            assert.equal("wenhao.lin@gmail.com", user.email);
+            done();
+        }, function(error) {
+            done(error);
+        })
+
+
 
     });
 
