@@ -16,14 +16,13 @@ function searUserByEmail(email) {
             where: {
                 email: email
             }
-        }).then(function (results) {
-            resolve(results);
+        }).then(function (result) {
+            resolve(result);
 
         }, function(error) {
             reject(error);
         })
     });
-
 }
 
 /**
