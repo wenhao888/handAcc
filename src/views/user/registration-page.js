@@ -1,10 +1,13 @@
 var angular= require("angular");
 require("../shared/validators");
 
-var reg= angular.module("registration",["validators","ngPasswordStrength"]);
+var reg= angular.module("registration",[require('angular-resource'),"validators","ngPasswordStrength"]);
 
-reg.controller("registrationController",["$scope", function ($scope) {
+reg.factory("query",["$resource", function ($resource) {
+    return $resource("/api/users/email/_search")
+}]);
 
+reg.controller("registrationController",["$scope", "query", function ($scope, query) {
     $scope.cancel = function () {
         window.history.back();
     };
@@ -23,3 +26,4 @@ reg.controller("registrationController",["$scope", function ($scope) {
     }
 
 }]);
+
