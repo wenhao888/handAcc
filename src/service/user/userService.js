@@ -1,5 +1,6 @@
 var models= require("../../models");
 var User= models.User;
+var stringHelp = require("../help/stringHelp");
 
 
 /**
@@ -10,6 +11,9 @@ var User= models.User;
  */
 function getUserByEmail(email) {
     var email = (email || "").toLowerCase().trim();
+    if (stringHelp.isBlank(email)) {
+        return Promise.resolve(null);
+    }
 
     return new Promise(function(resolve, reject) {
         User.findOne({

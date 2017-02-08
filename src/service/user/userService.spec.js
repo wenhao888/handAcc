@@ -41,6 +41,16 @@ describe("test userService", function() {
 
     });
 
+    it("test searUserByEmail --- blank email", function(done) {
+        userService.getUserByEmail("    ").then(function(user) {
+            assert.equal(null, user);
+            done();
+        }, function(error) {
+            done(error);
+        })
+
+    });
+
 
     it("test getUserById --- found", function(done) {
         userService.getUserById(1).then(function(user) {
