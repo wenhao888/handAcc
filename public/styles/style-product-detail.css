@@ -11,6 +11,7 @@
     position: absolute;
     left:0;
     top:0;
+    max-width:70px;
 }
 
 .thumbnail-list li {
@@ -56,6 +57,12 @@
     color:#949494;
 }
 
-.feature-item{
+.feature-item {
     color:black;
+}
+
+#zoom {
+    max-width: 390px;
+    min-height: 50px;
+    margin-left: 45px;
 }

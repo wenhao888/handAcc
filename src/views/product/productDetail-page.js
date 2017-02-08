@@ -1,5 +1,5 @@
 var angular=require("angular");
-var productDetail = angular.module("productDetail",[]);
+var productDetail = angular.module("productDetail",['etalag']);
 
 productDetail.controller("detailController",["$scope", function($scope) {
     $scope.currentIndex=0;
