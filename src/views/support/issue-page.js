@@ -1,5 +1,5 @@
 var angular=require("angular");
-require("../shared/validators");
+require("../shared/validators/index");
 
 var issue=angular.module("issue",['ui.select',"validators"]);
 

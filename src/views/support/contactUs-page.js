@@ -1,5 +1,5 @@
 var angular= require("angular");
-require("../shared/validators");
+require("../shared/validators/index");
 var contactUs = angular.module("contactUs",["validators"]);
 
 contactUs.controller("contactUsController", ["$scope", function($scope) {
