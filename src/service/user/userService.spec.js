@@ -20,7 +20,6 @@ describe("test userService", function() {
 
     });
 
-
     it("test searUserByEmail --- found", function(done) {
         userService.getUserByEmail("wenhao.lin@gmail.com").then(function(user) {
             assert.equal("wenhao.lin@gmail.com", user.email);
@@ -42,6 +41,16 @@ describe("test userService", function() {
 
     });
 
+    it("test searUserByEmail --- blank email", function(done) {
+        userService.getUserByEmail("    ").then(function(user) {
+            assert.equal(null, user);
+            done();
+        }, function(error) {
+            done(error);
+        })
+
+    });
+
 
     it("test getUserById --- found", function(done) {
         userService.getUserById(1).then(function(user) {
@@ -50,8 +59,22 @@ describe("test userService", function() {
         }, function(error) {
             done(error);
         })
+    });
 
 
+    it("test create user --- found", function(done) {
+       userService.createUser({
+           email:"sally.lin@gmail.com",
+           password:"P@ssword1",
+           firstName:"wenhao",
+           lastName: "lin",
+           phone:"12345678"
+       }).then(function(user) {
+           assert.equal("sally.lin@gmail.com", user.email);
+           done();
+       }, function(error) {
+           done(error);
+       })
 
     });
 
