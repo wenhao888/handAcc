@@ -1,9 +1,9 @@
 <%- contentFor("content") %>
 
 <link rel="stylesheet" href="/styles/style-product-detail.css"/>
-<script src="/javascripts/etalag/jquery.elevatezoom.js"></script>
+<script src="/vendor/etalag/jquery.elevatezoom.js"></script>
 <script src="/javascripts/product/productDetail-page.js"></script>
-<script src="/javascripts/etalag/etalag.js"></script>
+<script src="/vendor/etalag/etalag.js"></script>
 
 <div ng-app="productDetail" ng-controller="detailController"
       ng-init="product=<%=JSON.stringify(product)%>">
