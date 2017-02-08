@@ -1,5 +1,5 @@
 <%-contentFor("content")%>
-<script src="/javascripts/user/issue-page.js"></script>
+<script src="/javascripts/support/issue-page.js"></script>
 
 <link rel="stylesheet" href="/vendor/angular-ui-select/dist/select.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
@@ -41,7 +41,7 @@
 
     <form class="form-horizontal login-form" name="issueForm" ng-app="issue" ng-controller="issueController as vm" novalidate="true"
             ng-init="vm.products=<%=JSON.stringify(products)%>"
-            action="/users/issue" method="post">
+            action="/support/issue" method="post">
 
         <div class="form-group">
             <label class="control-label col-sm-4">Your name <span class="text-danger">*</span></label>
