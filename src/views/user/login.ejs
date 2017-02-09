@@ -1,6 +1,7 @@
 <%-contentFor("content")%>
 
 <link rel="stylesheet" href="/styles/style-login.css"/>
+<script src="/javascripts/user/login-page.js"></script>
 
 
 <div class="container" style="width:450px;">
@@ -8,20 +9,28 @@
       User Login
    </h3>
 
-    <form class="form-horizontal login-form"
-        novalidate action="/users/login" method="post">
+    <form class="form-horizontal login-form" ng-app="login" ng-controller="loginController"
+        novalidate action="/users/login" method="post" name="loginForm">
 
         <div class="form-group">
            <label class="control-label col-sm-4">Email </label>
            <div class="col-sm-8">
-               <input type="email" class="form-control" name="email"/>
+               <input type="email" class="form-control" name="email" ng-model="email"
+                      required ng-model-options="{updateOn:'blur'}"/>
+
+               <p class="input-error" ng-show=" loginForm.email.$error.required && submitted" ng-bind="'required'">
+               </p>
+               <p class="input-error" ng-show=" loginForm.email.$error.email && submitted" ng-bind="'invalid email'">
+               </p>
            </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-4"> Password </label>
             <div class="col-sm-8">
-                <input type="password" class="form-control" name="password">
+                <input type="password" class="form-control" name="password" ng-model="password"  required>
+                <p class="input-error" ng-show="loginForm.password.$error.required && submitted" ng-bind="'required'">
+                </p>
             </div>
         </div>
 
@@ -29,7 +38,7 @@
         <div class="form-group">
             <div class="col-sm-8 col-sm-offset-4">
                 <a class="btn btn-sm btn-warning" href="/"> Cancel </a>
-                <button class="btn btn-sm btn-primary"> Submit </button>
+                <button class="btn btn-sm btn-primary" ng-click="submit(loginForm.$valid, $event)"> Submit </button>
             </div>
         </div>
 

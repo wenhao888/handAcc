@@ -9,10 +9,26 @@ router.get('/login', function(req, res, next) {
 
 
 router.post('/login', function(req, res, next) {
+  var email=req.body.email;
+  var password= req.body.password;
+  var user = userService.getUserByEmail(email);
+
+  if (! user || ! user.id) {
+    res.redirect("login-failure");
+  }
+
+  var storedPassword= user.password || "";
+  if (password != storedPassword) {
+    res.redirect("login-failure");
+  }
+
   res.redirect("/products/list")
 });
 
+router.get("/login-failure", function(req,res,end) {
+  res.render("user/login-failure",{layout:'layout/general'});
 
+});
 
 router.get("/registration", function(req, res, next) {
   res.render('user/registration', {layout:'layout/general'});
