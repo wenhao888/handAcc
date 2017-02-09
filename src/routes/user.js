@@ -11,18 +11,24 @@ router.get('/login', function(req, res, next) {
 router.post('/login', function(req, res, next) {
   var email=req.body.email;
   var password= req.body.password;
-  var user = userService.getUserByEmail(email);
+  var user = userService.getUserByEmail(email).then(function(user){
 
-  if (! user || ! user.id) {
-    res.redirect("login-failure");
-  }
+    if (! user || ! user.id) {
+      res.redirect("login-failure");
+    }
 
-  var storedPassword= user.password || "";
-  if (password != storedPassword) {
-    res.redirect("login-failure");
-  }
+    var storedPassword= user.password || "";
+    if (password != storedPassword) {
+      res.redirect("login-failure");
+    }
 
-  res.redirect("/products/list")
+    res.redirect("/products/list")
+
+  }, function(error) {
+    logger.error("can't get user from email", error);
+    next(error);
+  });
+
 });
 
 router.get("/login-failure", function(req,res,end) {
