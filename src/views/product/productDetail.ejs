@@ -3,38 +3,30 @@
 <link rel="stylesheet" href="/styles/style-product-detail.css"/>
 <script src="/vendor/etalag/jquery.elevatezoom.js"></script>
 <script src="/javascripts/product/productDetail-page.js"></script>
-<script src="/vendor/etalag/etalag.js"></script>
+
 
 <div ng-app="productDetail" ng-controller="detailController"
-      ng-init="product=<%=JSON.stringify(product)%>">
+     ng-init="product=<%= JSON.stringify(product) %>">
     <h3 class="page-title" style="text-align: center">
-        <%-product.name%>
+        <%- product.name %>
     </h3>
     <div class="container">
-        <div class="image-container">
-            <div class="etalag-display">
-                <img id="zoom"  ng-src="{{product.images[0]}}" data-zoom-image="{{product.images[0]}}">
-
-                <div id="gallery" class="thumbnail-list">
-                    <a class="thumbnail-button gallery-img" href="#" ng-repeat="i in product.images"  data-image="{{i}}" data-zoom-image="{{i}}">
-                        <img class="img_01" ng-src="{{i}}" />
-                    </a>
-                </div>
-                <div class="image-display">
-                </div>
-            </div>
-            <!--<ul class="thumbnail-list">
+        <div class="image-container etalag-display" >
+            <ul class="thumbnail-list">
                 <li ng-repeat="i in product.images">
-                    <span  class="thumbnail-button" ng-class="{active: $index==currentIndex}" ng-mouseover="clickImage($index)">
-                        <img ng-src="{{i}}" />
-                    </span>
+                        <span class="thumbnail-button gallery-img" data-image="{{i}}" data-zoom-image="{{i}}"
+                              ng-class="{active: $index==currentIndex}" ng-mouseover="clickImage($index)">
+                            <img ng-src="{{i}}"/>
+                        </span>
                 </li>
+            </ul>
 
-            </ul>-->
-            <!--<div class="image-display">
-                    <img ng-src="{{product.images[currentIndex]}}"/>
-            </div>-->
+            <div class="image-display">
+                <img id="zoom" style="max-width: 390px; min-height: 50px;" ng-src="{{product.images[0]}}"
+                     data-zoom-image="{{product.images[0]}}">
+            </div>
         </div>
+
 
         <div class="detail-container">
             <p class="text-info">
@@ -64,7 +56,7 @@
 
             <p>
                 <a href="{{product.buyUrl}}">
-                    <span class="glyphicon glyphicon-shopping-cart" ></span>
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
                 </a>
             </p>
 
