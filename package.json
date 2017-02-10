@@ -19,6 +19,7 @@
     "express": "~4.13.4",
     "express-ejs-layouts": "^2.2.0",
     "express-mailer": "^0.3.1",
+    "express-session": "^1.15.0",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-mocha": "^3.0.1",
@@ -32,6 +33,7 @@
     "sequelize": "^3.28.0",
     "serve-favicon": "~2.3.0",
     "ui-select": "^0.19.6",
+    "underscore": "^1.8.3",
     "validator": "^6.2.1"
   },
   "devDependencies": {},
