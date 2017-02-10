@@ -5,16 +5,24 @@
         </div>
         <div class="pull-right">
             <ul class="user-link-list">
-                <li class="user-link-item">
-                    <a href="/users/login"> login </a>
 
-                </li>
+                <% if(!token.name){ %>
+                    <li class="user-link-item">
+                        <a href="/users/login"> login </a>
+                    </li>
+                <% } else{ %>
+                    <li class="user-link-item">
+                        <a href="#"><%=token.name%></a>
+                    </li>
+                <% } %>
+
                 <li class="user-link-item">
                     <a href="/users/registration"> register </a>
                 </li>
                 <li class="user-link-item user-links__item--separate">
                     <a href="/support/contactUs"> contact us </a>
                 </li>
+
             </ul>
         </div>
     </div>

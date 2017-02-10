@@ -22,6 +22,11 @@ router.post('/login', function(req, res, next) {
       res.redirect("login-failure");
     }
 
+    var token ={
+      id: user.id,
+      name: user.firstName
+    };
+    req.session.token=token;
     res.redirect("/products/list")
 
   }, function(error) {
