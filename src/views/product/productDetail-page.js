@@ -17,10 +17,7 @@ productDetail.directive('etalagDisplay', function ($timeout) {
             $timeout(function () {
                 var option= {
                     cursor: 'pointer',
-                    imageCrossfade: true,
-                    zoomWindowHeight: 550,
-                    zoomWindowWidth: 702,
-                    lensSize: 10,
+                    imageCrossfade: true
                 };
 
                 $("#zoom").elevateZoom(option);
