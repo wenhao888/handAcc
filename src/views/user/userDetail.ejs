@@ -26,6 +26,7 @@
                 <input type="email"  ng-model="user.email" class="form-control none-dup-email-validator"  skip-id="<%=user.id%>" name="email"
                        ng-model-options="{updateOn: 'default blur', debounce: {'default': 300, 'blur': 0}}"
                        autocomplete="off" required>
+
                 <p class="input-error" ng-show="regForm.email.$error.required && submitted" ng-bind="'required'">
                 </p>
                 <p class="input-error" ng-show="regForm.email.$error.email && submitted" ng-bind="'invalid email'">
