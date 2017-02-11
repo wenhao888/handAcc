@@ -24,7 +24,7 @@ router.post('/login', function(req, res, next) {
 
     var token ={
       id: user.id,
-      name: user.firstName
+      firstName: user.firstName,
     };
     req.session.token=token;
     res.redirect("/products/list")

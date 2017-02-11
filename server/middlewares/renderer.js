@@ -3,9 +3,10 @@ var _=require("underscore");
 render=function(req,res,next) {
     var _render= res.render;
     var token=req.session.token || {};
+    var url= (req.url||"").trim();
 
     res.render = function( view, options, fn ) {
-        _.extend( options, {token: token} );
+        _.extend( options, {token: token, isRoot: url==='/' || url==='\\'}  );
         _render.call( this, view, options, fn );
     };
 

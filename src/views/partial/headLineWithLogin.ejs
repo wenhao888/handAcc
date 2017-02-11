@@ -6,22 +6,34 @@
         <div class="pull-right">
             <ul class="user-link-list">
 
-                <% if(!token.name){ %>
+                <% if(!token.firstName){ %>
                     <li class="user-link-item">
                         <a href="/users/login"> login </a>
                     </li>
                 <% } else{ %>
                     <li class="user-link-item">
-                        <a href="#"><%=token.name%></a>
+                      Hello,  <a href="#" style="margin-right:200px;"><%=token.firstName%></a>
+                    </li>
+
+                     <li class="user-link-item">
+                        <a href="#">Logoff</a>
                     </li>
                 <% } %>
 
                 <li class="user-link-item">
                     <a href="/users/registration"> register </a>
                 </li>
+
                 <li class="user-link-item user-links__item--separate">
                     <a href="/support/contactUs"> contact us </a>
                 </li>
+
+                <% if(!isRoot){ %>
+                    <li class="user-link-item">
+                        <a class="icon icon-home"  href="/">
+                        </a>
+                    </li>
+                <% } %>
 
             </ul>
         </div>
