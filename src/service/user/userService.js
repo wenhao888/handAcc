@@ -9,11 +9,13 @@ var stringHelp = require("../help/stringHelp");
  * @param email
  * @returns {Promise}
  */
-function getUserByEmail(email) {
+function getUserByEmail(email, skipId) {
     var email = (email || "").toLowerCase().trim();
     if (stringHelp.isBlank(email)) {
         return Promise.resolve(null);
     }
+
+    skipId = skipId || -1;
 
     return new Promise(function(resolve, reject) {
         User.findOne({
@@ -21,8 +23,14 @@ function getUserByEmail(email) {
                 email: email
             }
         }).then(function (result) {
-            resolve(result);
+            result = result || {};
 
+           if (result.id == skipId) {
+                resolve(null);
+
+            } else {
+                resolve(result);
+            }
         }, function(error) {
             reject(error);
         })

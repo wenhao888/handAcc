@@ -7,7 +7,9 @@ var router = express.Router();
 
 router.post("/users/email/_search", function(req, res, next) {
     var email = req.body.query.email;
-    userService.getUserByEmail(email).then(function(user) {
+    var skipId = req.body.query.skipId;
+
+    userService.getUserByEmail(email, skipId).then(function(user) {
         res.end(JSON.stringify(user||{}));
 
     }, function (error) {
