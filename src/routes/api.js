@@ -7,10 +7,15 @@ var router = express.Router();
 
 router.post("/users/email/_search", function(req, res, next) {
     var email = req.body.query.email;
-    var skipId = req.body.query.skipId;
+    var skipId = req.body.query.skipId || -1;
 
-    userService.getUserByEmail(email, skipId).then(function(user) {
-        res.end(JSON.stringify(user||{}));
+    userService.getUserByEmail(email).then(function(user) {
+        user = user || {};
+        if (user.id == skipId) {
+            user = {};
+        }
+
+        res.end(JSON.stringify(user));
 
     }, function (error) {
         logger.error(error);
