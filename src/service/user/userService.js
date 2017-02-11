@@ -22,7 +22,6 @@ function getUserByEmail(email) {
             }
         }).then(function (result) {
             resolve(result);
-
         }, function(error) {
             reject(error);
         })

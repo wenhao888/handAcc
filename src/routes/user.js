@@ -24,7 +24,7 @@ router.post('/login', function(req, res, next) {
 
     var token ={
       id: user.id,
-      name: user.firstName
+      firstName: user.firstName,
     };
     req.session.token=token;
     res.redirect("/products/list")
@@ -41,8 +41,14 @@ router.get("/login-failure", function(req,res,end) {
 
 });
 
+router.get("/logoff", function(req,res,end) {
+  req.session.token = {};
+  res.redirect("/");
+});
+
+
 router.get("/registration", function(req, res, next) {
-  res.render('user/registration', {layout:'layout/general'});
+  res.render('user/userDetail', {layout:'layout/general', user:{}});
 });
 
 router.post("/registration", function(req, res, next) {
@@ -66,6 +72,17 @@ router.post("/registration", function(req, res, next) {
 
 router.get("/registration-confirm", function(req, res, next) {
   res.render("user/registration-confirm",{layout:'layout/general'});
+});
+
+
+router.get("/profile", function(req,res,next) {
+  var id = req.session.token.id;
+  userService.getUserById(id).then(function(user) {
+    res.render('user/userDetail', {layout:'layout/general', user: user});
+
+  }, function(error) {
+    next(error);
+  })
 });
 
 module.exports = router;
