@@ -1,4 +1,4 @@
-var validator = require("./userValidator");
+var validator = require("./createUserValidator");
 var assert = require("chai").assert;
 
 
