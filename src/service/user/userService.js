@@ -1,7 +1,9 @@
 var models= require("../../models");
 var User= models.User;
 var stringHelp = require("../help/stringHelp");
-
+var logger = require("../logging/logService").getLogger("userService");
+var InternalException = require("../../exception").InternalException;
+var validator=require("./createUserValidator");
 
 /**
  * search user by its email
@@ -22,8 +24,12 @@ function getUserByEmail(email) {
             }
         }).then(function (result) {
             resolve(result);
+
         }, function(error) {
-            reject(error);
+            var message = stringHelp.format("failure in getting email {0}", email);
+            logger.error(message, error);
+
+            reject(new InternalException(message));
         })
     });
 }
@@ -36,7 +42,6 @@ function getUserByEmail(email) {
  */
 function createUser(user) {
     user.email = (user.email || "").toLowerCase().trim();
-
     return new Promise(function(resolve, reject) {
         User.create(user).then(function(result){
             resolve(result);
@@ -62,7 +67,6 @@ function getUserById(id) {
         })
     });
 }
-
 
 
 module.exports = {

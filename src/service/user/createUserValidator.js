@@ -1,27 +1,31 @@
 /**
- * validate a user when creating/updating a usr
+ * validate a user when creating a user in th backend
+ *  we reject after finding one error because error happens only when user hack our fond-end and bypass our
+ *    validators for the browser
  */
-
+var ValidationException=require("../../exception").ValidationException;
+var userService=require("./userService");
 var stringHelp = require("../help/stringHelp");
+
 
 function validate(user) {
     user = user || {};
-    var result = {
-        isValid: true,
-        errors: []
-    };
 
-    if (stringHelp.isBlank(user.email)) {
-        result.isValid =false;
-        result.errors.push("email can not be blank");
-    }
+    return new Promise(function(resolve, reject) {
+        if (stringHelp.isBlank(user.email)) {
+            reject(new ValidationException("email can not be blank"));
+        }
 
-    if (stringHelp.isBlank(user.password)) {
-        result.isValid =false;
-        result.errors.push("password can not be blank");
-    }
+        if (stringHelp.isBlank(user.password)) {
+            reject(new ValidationException("password can not be blank"));
+        }
 
-    return result;
+        userService.getUserByEmail(user.email).then(function() {
+            resolve(null);
+        }, function(error) {
+            reject(error);
+        });
+    });
 }
 
 
