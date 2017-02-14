@@ -2,7 +2,9 @@ var _=require("underscore");
 
 render=function(req,res,next) {
     var _render= res.render;
-    var token=req.session.token || {};
+    req.session.token = req.session.token || {};   //for protection
+    var token= req.session.token;
+
     var url= (req.url||"").trim();
 
     res.render = function( view, options, fn ) {
