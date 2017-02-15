@@ -1,5 +1,7 @@
 var validator = require("./createUserValidator");
 var assert = require("chai").assert;
+var userService=require("./userService");
+validator.setUserService(userService);
 
 
 describe("test createUserValidator", function () {

@@ -1,6 +1,6 @@
 var models=require("../../models");
 var assert=require("chai").assert;
-
+var ValidationException = require("../../exception").ValidationException;
 var userService=require("./userService");
 
 describe("test userService", function() {
@@ -11,11 +11,11 @@ describe("test userService", function() {
             seedUser().then(function() {
                 done();
             }, function(error) {
-                done(error);
+                done();
             });
 
         }, function(error) {
-            done(error);
+            done();
         })
 
     });
@@ -25,7 +25,7 @@ describe("test userService", function() {
             assert.equal("wenhao.lin@gmail.com", user.email);
             done();
         }, function(error) {
-            done(error);
+            done();
         })
 
     });
@@ -36,7 +36,7 @@ describe("test userService", function() {
             assert.equal(null, user);
             done();
         }, function(error) {
-            done(error);
+            done();
         })
 
     });
@@ -46,7 +46,7 @@ describe("test userService", function() {
             assert.equal(null, user);
             done();
         }, function(error) {
-            done(error);
+            done();
         })
 
     });
@@ -57,12 +57,12 @@ describe("test userService", function() {
             assert.equal("wenhao.lin@gmail.com", user.email);
             done();
         }, function(error) {
-            done(error);
+            done();
         })
     });
 
 
-    it.skip("test create user --- found", function(done) {
+    it("test create user --- success", function(done) {
        userService.createUser({
            email:"sally.lin@gmail.com",
            password:"P@ssword1",
@@ -73,8 +73,80 @@ describe("test userService", function() {
            assert.equal("sally.lin@gmail.com", user.email);
            done();
        }, function(error) {
-           done(error);
+           done();
        })
+
+    });
+
+    it("test create user --- email is blank", function(done) {
+        userService.createUser({
+            email:"  ",
+            password:"P@ssword1",
+            firstName:"wenhao",
+            lastName: "lin",
+            phone:"12345678"
+        }).then(function() {
+            done();
+
+        }, function(error) {
+            assert.isTrue(error instanceof ValidationException);
+            assert.equal("email can not be blank", error.message);
+            assert.equal(400, error.code);
+            done();
+        })
+    });
+
+    it("test create user --- password is blank", function(done) {
+        userService.createUser({
+            email:"xyz@gmail.com",
+            password:" ",
+            firstName:"wenhao",
+            lastName: "lin",
+            phone:"12345678"
+        }).then(function() {
+            done();
+
+        }, function(error) {
+            assert.isTrue(error instanceof ValidationException);
+            assert.equal("password can not be blank", error.message);
+            assert.equal(400, error.code);
+            done();
+        })
+
+    });
+
+    it("test create user --- firstName is blank", function(done) {
+        userService.createUser({
+            email:"sally.lin@gmail.com",
+            password:"P@ssword1",
+            firstName:"  ",
+            lastName: "lin",
+            phone:"12345678"
+        }).then(function() {
+            done();
+        }, function(error) {
+            assert.isTrue(error instanceof ValidationException);
+            assert.equal("firstName can not be blank", error.message);
+            assert.equal(400, error.code);
+            done();
+        })
+    });
+
+    it("test create user --- duplicate email", function(done) {
+        userService.createUser({
+            email:"wenhao.lin@gmail.com",
+            password:"P@ssword1",
+            firstName:"wenhao",
+            lastName: "lin",
+            phone:"12345678"
+        }).then(function() {
+            done();
+        }, function(error) {
+            assert.isTrue(error instanceof ValidationException);
+            assert.equal("email already exists in our system", error.message);
+            assert.equal(400, error.code);
+            done();
+        })
 
     });
 

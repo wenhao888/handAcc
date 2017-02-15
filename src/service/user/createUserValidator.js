@@ -6,7 +6,6 @@
 var ValidationException=require("../../exception").ValidationException;
 var stringHelp = require("../help/stringHelp");
 
-
 var _userService = null;
 
 function validate(user) {
@@ -23,8 +22,12 @@ function validate(user) {
             return;
         }
 
+        if (stringHelp.isBlank(user.firstName)) {
+            reject(new ValidationException("firstName can not be blank"));
+            return;
+        }
 
-        userService.getUserByEmail(user.email).then(function (user) {
+        _userService.getUserByEmail(user.email).then(function (user) {
             if (!user) {
                 resolve();
 

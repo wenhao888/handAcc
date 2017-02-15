@@ -3,7 +3,15 @@ var User= models.User;
 var stringHelp = require("../help/stringHelp");
 var logger = require("../logging/logService").getLogger("userService");
 var InternalException = require("../../exception").InternalException;
-var validator=require("./createUserValidator");
+var createValidator=require("./createUserValidator");
+
+var userService = {
+    getUserByEmail:getUserByEmail,
+    createUser: createUser,
+    getUserById: getUserById
+};
+
+createValidator.setUserService(userService);
 
 /**
  * search user by its email
@@ -42,13 +50,20 @@ function getUserByEmail(email) {
  */
 function createUser(user) {
     user.email = (user.email || "").toLowerCase().trim();
-    return new Promise(function(resolve, reject) {
-        User.create(user).then(function(result){
-            resolve(result);
-        }, function (error) {
-            reject(error);
-        })
-    });
+    return createValidator
+        .validate(user)
+        .then(function() {
+           return new Promise(function(resolve, reject) {
+               User.create(user).then(function(user){
+                   resolve(user);
+
+               }, function (error) {
+                   logger.error("failed to create user", error);
+
+                   reject(new InternalException(error.message));
+               })
+           })
+        });
 }
 
 
@@ -63,14 +78,12 @@ function getUserById(id) {
         User.findById(id).then(function(result){
             resolve(result);
         }, function (error) {
-            reject(error);
-        })
+            var message = stringHelp.format("failed to get user for id", id);
+            logger.error(message, error);
+
+            reject(new InternalException(message));        })
     });
 }
 
 
-module.exports = {
-    getUserByEmail:getUserByEmail,
-    createUser: createUser,
-    getUserById: getUserById
-};
+module.exports = userService;
