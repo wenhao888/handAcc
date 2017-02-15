@@ -74,6 +74,7 @@ function createUser(user) {
  * @returns {Promise}
  */
 function getUserById(id) {
+    id = id || 0;
     return new Promise(function(resolve, reject) {
         User.findById(id).then(function(result){
             resolve(result);

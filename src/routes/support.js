@@ -5,8 +5,6 @@ var productService = require("../service/product/productService");
 var router = express.Router();
 
 
-
-
 router.get("/contactUs", function(req, res, next) {
     res.render('support/contactUs', {layout:'layout/general'});
 });

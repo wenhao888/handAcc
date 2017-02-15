@@ -19,6 +19,7 @@ router.post("/users/email/_search", function(req, res, next) {
 
     }, function (error) {
         logger.error(error);
+
         next(error);
     });
 
