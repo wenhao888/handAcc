@@ -62,7 +62,7 @@ describe("test userService", function() {
     });
 
 
-    it("test create user --- found", function(done) {
+    it.skip("test create user --- found", function(done) {
        userService.createUser({
            email:"sally.lin@gmail.com",
            password:"P@ssword1",
