@@ -44,6 +44,16 @@ describe("test promise", function() {
             assert.isTrue(error instanceof  ValidationException);
             done(error)
         })
+    });
+
+    it("returns promise inside handler", function() {
+        Promise.resolve("outside").then(function() {
+            return new Promise(function(resolve, reject) {
+                return "value in catch"
+            }).then(function(value) {
+                assert.equal("value in catch", value)
+            })
+        })
     })
 
 

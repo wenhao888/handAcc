@@ -4,9 +4,9 @@
  *    validators for the browser
  */
 var ValidationException=require("../../exception").ValidationException;
-var userService=require("./userService");
 var stringHelp = require("../help/stringHelp");
 
+var _userService = null;
 
 function validate(user) {
     user = user || {};
@@ -14,21 +14,38 @@ function validate(user) {
     return new Promise(function(resolve, reject) {
         if (stringHelp.isBlank(user.email)) {
             reject(new ValidationException("email can not be blank"));
+            return;
         }
 
         if (stringHelp.isBlank(user.password)) {
             reject(new ValidationException("password can not be blank"));
+            return;
         }
 
-        userService.getUserByEmail(user.email).then(function() {
-            resolve(null);
+        if (stringHelp.isBlank(user.firstName)) {
+            reject(new ValidationException("firstName can not be blank"));
+            return;
+        }
+
+        _userService.getUserByEmail(user.email).then(function (user) {
+            if (!user) {
+                resolve();
+
+            } else {
+               reject(new ValidationException("email already exists in our system"))
+            }
+
         }, function(error) {
             reject(error);
-        });
+        })
     });
 }
 
+function setUserService(userService) {
+    _userService = userService;
+}
 
 module.exports = {
-    validate: validate
+    validate: validate,
+    setUserService: setUserService
 };

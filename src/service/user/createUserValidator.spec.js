@@ -1,8 +1,10 @@
 var validator = require("./createUserValidator");
 var assert = require("chai").assert;
+var userService=require("./userService");
+validator.setUserService(userService);
 
 
-describe("test user service", function () {
+describe("test createUserValidator", function () {
     it("user email is blank", function (done) {
         validator.validate({email: "   ", password: "a"}).then(function () {
             done();
