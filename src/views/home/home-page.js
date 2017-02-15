@@ -4,10 +4,10 @@ var home = angular.module("home",["ui.bootstrap","slick"]);
 home.controller("homeController", ["$scope", function($scope) {
     $scope.slides= [
         {   id: 0,
-            src:"/images/image1.jpg"
+            src:"/images/coverImage_1.jpg"
         },
         {   id: 1,
-            src:"/images/image2.jpg"
+            src:"/images/image1.jpg"
         },
         {   id: 2,
             src:"/images/image3.jpg"
