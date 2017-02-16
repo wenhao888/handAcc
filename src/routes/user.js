@@ -2,7 +2,6 @@ var express = require('express');
 var userService = require("../service/user/userService");
 var loginService = require("../service/security/loginService");
 var router = express.Router();
-var logger = require("../service/logging/logService").getLogger("user");
 
 router.get('/login', function (req, res, next) {
     res.render('user/login', {layout: 'layout/general'});
