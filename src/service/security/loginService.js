@@ -36,7 +36,15 @@ function login(email, password) {
         })
 }
 
+function createToken(user) {
+    return {
+        id: user.id,
+        email: user.email,
+        firstName: user.firstName
+    }
+}
 
 module.exports ={
-    login: login
+    login: login,
+    createToken:createToken
 };
