@@ -2,7 +2,6 @@ var express = require('express');
 var userService = require("../service/user/userService");
 var loginService = require("../service/security/loginService");
 var router = express.Router();
-var logger = require("../service/logging/logService").getLogger("user");
 
 router.get('/login', function (req, res, next) {
     res.render('user/login', {layout: 'layout/general'});
@@ -80,5 +79,28 @@ router.get("/profile", function (req, res, next) {
         next(error);
     })
 });
+
+
+router.post("/profile", function(req,res,next) {
+    var user = {};
+    user.id=req.session.token.id;
+    user.email = req.body.email;
+    user.firstName = req.body.firstName;
+    user.lastName = req.body.lastName;
+    user.password = req.body.password;
+    user.phone = req.body.phone;
+
+    userService.updateUser(user).then(function () {
+        res.redirect("profile-confirm");
+
+    }, function (error) {
+        next(error);
+    });
+});
+
+router.get("/profile-confirm", function (req, res, next) {
+    res.render("user/updateProfile-confirm", {layout: 'layout/general'});
+});
+
 
 module.exports = router;

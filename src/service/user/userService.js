@@ -3,15 +3,19 @@ var User= models.User;
 var stringHelp = require("../help/stringHelp");
 var logger = require("../logging/logService").getLogger("userService");
 var InternalException = require("../../exception").InternalException;
-var createValidator=require("./createUserValidator");
+var ResourceNotFoundException = require("../../exception").ResourceNotFoundException;
+var createValidator = require("./createUserValidator");
+var updateValidator = require("./updateUserValidator");
 
 var userService = {
     getUserByEmail:getUserByEmail,
     createUser: createUser,
-    getUserById: getUserById
+    getUserById: getUserById,
+    updateUser:updateUser
 };
 
 createValidator.setUserService(userService);
+updateValidator.setUserService(userService);
 
 /**
  * search user by its email
@@ -19,8 +23,10 @@ createValidator.setUserService(userService);
  * @param email
  * @returns {Promise}
  */
-function getUserByEmail(email) {
+function getUserByEmail(email, skipId) {
     var email = (email || "").toLowerCase().trim();
+    skipId = skipId || 0;
+
     if (stringHelp.isBlank(email)) {
         return Promise.resolve(null);
     }
@@ -28,7 +34,10 @@ function getUserByEmail(email) {
     return new Promise(function(resolve, reject) {
         User.findOne({
             where: {
-                email: email
+                email: email,
+                id: {
+                    $ne: skipId
+                }
             }
         }).then(function (result) {
             resolve(result);
@@ -66,6 +75,38 @@ function createUser(user) {
         });
 }
 
+
+/**
+ * update an existing user
+ *
+ * @param user
+ * @returns {*}
+ */
+function updateUser(user) {
+    if (!user || !user.id) {
+        return Promise.reject(new ResourceNotFoundException("can't find a null user"));
+    }
+
+    return updateValidator
+        .validate(user)
+        .then(function() {
+            return new Promise(function(resolve, reject) {
+                User.update(user, {
+                    where: {
+                        id: user.id
+                    }
+                }).then(function(user){
+                    resolve(user);
+
+                }, function (error) {
+                    var message= stringHelp.format("failed to update user {0}", user.id);
+                    logger.error(message, error);
+
+                    reject(new InternalException(error.message));
+                })
+            })
+        });
+}
 
 /**
  * find a user by id

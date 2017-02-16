@@ -21,7 +21,7 @@ userDetail.controller("registrationController",["$scope", "emailQuery", function
     $scope.submit = function (valid, $event) {
       $scope.submitted = true;
 
-      if (!valid) {
+      if (!valid || $scope.regForm.email.$pending) {
           $event.preventDefault();
       }
     };
