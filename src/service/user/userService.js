@@ -91,7 +91,7 @@ function updateUser(user) {
         .validate(user)
         .then(function() {
             return new Promise(function(resolve, reject) {
-                User.upate(user, {
+                User.update(user, {
                     where: {
                         id: user.id
                     }
