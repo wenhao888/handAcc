@@ -95,8 +95,8 @@ function updateUser(user) {
                     where: {
                         id: user.id
                     }
-                }).then(function(user){
-                    resolve(user);
+                }).then(function(){
+                    resolve(); //update will not return the update record in the callback
 
                 }, function (error) {
                     var message= stringHelp.format("failed to update user {0}", user.id);

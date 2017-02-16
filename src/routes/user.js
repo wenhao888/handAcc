@@ -3,47 +3,59 @@ var userService = require("../service/user/userService");
 var loginService = require("../service/security/loginService");
 var router = express.Router();
 
+/**
+ * get login page
+ */
 router.get('/login', function (req, res, next) {
     res.render('user/login', {layout: 'layout/general'});
 });
 
 
+/**
+ * user login
+ */
 router.post('/login', function (req, res, next) {
     var email = req.body.email;
     var password = req.body.password;
 
     loginService.login(email, password)
         .then(function (user) {
-            var token = {
-                id: user.id,
-                firstName: user.firstName,
-            };
-            req.session.token = token;
-            res.redirect("/products/list")
-
+            req.session.token= loginService.createToken(user);
+            res.redirect("/products/list");
 
         }, function (error) {
-
             res.redirect("login-failure");
         });
 });
 
 
+/**
+ * show page when login failed
+ */
 router.get("/login-failure", function (req, res, end) {
     res.render("user/login-failure", {layout: 'layout/general'});
 
 });
 
+/**
+ * execute log off
+ */
 router.get("/logoff", function (req, res, end) {
-    req.session.token = {};
+    req.session.token= loginService.createToken({});
     res.redirect("/");
 });
 
 
+/**
+ * get new user registration page
+ */
 router.get("/registration", function (req, res, next) {
     res.render('user/userDetail', {layout: 'layout/general', user: {}});
 });
 
+/**
+ * post to create new user
+ */
 router.post("/registration", function (req, res, next) {
     var user = {};
     user.email = req.body.email;
@@ -62,11 +74,16 @@ router.post("/registration", function (req, res, next) {
 });
 
 
+/**
+ * show page when user register succeed
+ */
 router.get("/registration-confirm", function (req, res, next) {
     res.render("user/registration-confirm", {layout: 'layout/general'});
 });
 
 /**
+ *  get page to update user profile
+ *
  * profile menu is visible only when user has logged in
  */
 router.get("/profile", function (req, res, next) {
@@ -81,6 +98,9 @@ router.get("/profile", function (req, res, next) {
 });
 
 
+/**
+ * post to update user profile
+ */
 router.post("/profile", function(req,res,next) {
     var user = {};
     user.id=req.session.token.id;
@@ -91,6 +111,7 @@ router.post("/profile", function(req,res,next) {
     user.phone = req.body.phone;
 
     userService.updateUser(user).then(function () {
+        req.session.token= loginService.createToken(user);
         res.redirect("profile-confirm");
 
     }, function (error) {
@@ -98,6 +119,9 @@ router.post("/profile", function(req,res,next) {
     });
 });
 
+/**
+ * show page when profile update succeed
+ */
 router.get("/profile-confirm", function (req, res, next) {
     res.render("user/updateProfile-confirm", {layout: 'layout/general'});
 });
