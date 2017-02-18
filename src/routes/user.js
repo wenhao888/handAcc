@@ -65,8 +65,11 @@ router.post("/registration", function (req, res, next) {
     user.password = req.body.password;
     user.phone = req.body.phone;
 
+    //url of the page before registration
+    var referer=req.body.referer;
+
     userService.createUser(user).then(function () {
-        res.redirect("registration-confirm");
+        res.redirect("registration-confirm?closeUrl="+referer);
 
     }, function (error) {
         next(error);
@@ -79,7 +82,12 @@ router.post("/registration", function (req, res, next) {
  * show page when user register succeed
  */
 router.get("/registration-confirm", function (req, res, next) {
-    res.render("user/registration-confirm", {layout: 'layout/general'});
+    var closeUrl=req.query.closeUrl || "";
+    res.render("shared/confirm/confirm",
+        {   layout: 'layout/general',
+            title:"Registration Confirmation",
+            message:"You account has been successfully created. Please login using your email.",
+            closeUrl:closeUrl});
 });
 
 /**
@@ -129,7 +137,11 @@ router.post("/profile", function(req,res,next) {
  */
 router.get("/profile-confirm", function (req, res, next) {
     var closeUrl=req.query.closeUrl || "";
-    res.render("user/updateProfile-confirm", {layout: 'layout/general', closeUrl:closeUrl});
+    res.render("shared/confirm/confirm",
+        {   layout: 'layout/general',
+            title:"Update Profile Confirmation",
+            message:"You profile has been successfully updated.",
+            closeUrl:closeUrl});
 });
 
 
