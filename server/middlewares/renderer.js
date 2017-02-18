@@ -5,10 +5,9 @@ render=function(req,res,next) {
     req.session.token = req.session.token || {};   //for protection
     var token= req.session.token;
     var url= (req.url||"").trim();
-    var referer=req.header('Referer') ||"";
 
     res.render = function( view, options, fn ) {
-        _.extend( options, {token: token, isRoot: url==='/' || url==='\\', referer:referer}  );
+        _.extend( options, {token: token, isRoot: url==='/' || url==='\\'}  );
         _render.call( this, view, options, fn );
     };
 
