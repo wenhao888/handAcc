@@ -2,6 +2,7 @@ var express = require('express');
 var userService = require("../service/user/userService");
 var loginService = require("../service/security/loginService");
 var router = express.Router();
+var stringHelp = require("../service/help/stringHelp");
 
 /**
  * get login page
@@ -110,9 +111,13 @@ router.post("/profile", function(req,res,next) {
     user.password = req.body.password;
     user.phone = req.body.phone;
 
+    //return the page before edit profile
+    var referer=req.body.referer;
+
     userService.updateUser(user).then(function () {
         req.session.token= loginService.createToken(user);
-        res.redirect("profile-confirm");
+        var url=stringHelp.format("{0}?closeUrl={1}", "profile-confirm", referer);
+        res.redirect(url);
 
     }, function (error) {
         next(error);
@@ -123,7 +128,8 @@ router.post("/profile", function(req,res,next) {
  * show page when profile update succeed
  */
 router.get("/profile-confirm", function (req, res, next) {
-    res.render("user/updateProfile-confirm", {layout: 'layout/general'});
+    var closeUrl=req.query.closeUrl || "";
+    res.render("user/updateProfile-confirm", {layout: 'layout/general', closeUrl:closeUrl});
 });
 
 
