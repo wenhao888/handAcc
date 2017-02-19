@@ -39,7 +39,7 @@
         Report Product Issue
     </h3>
 
-    <form class="form-horizontal login-form" name="issueForm" ng-app="issue" ng-controller="issueController as vm" novalidate="true"
+    <form class="form-horizontal login-form" name="issueForm" ng-module="issue" ng-controller="issueController as vm" novalidate="true"
             ng-init="vm.products=<%=JSON.stringify(products)%>"
             action="/support/issue" method="post">
 
