@@ -29,7 +29,7 @@
         <div class="product-wrapper" ng-repeat="p in condition.products">
             <div class="product-image-wrapper">
                 <div class="product-preview__image" style="padding-top: 0">
-                    <a>
+                    <a ng-href="/products/{{p.id}}/detail">
                         <img ng-src="{{p.summary_image}}" style="width:100%;"> </img>
                     </a>
                 </div>
