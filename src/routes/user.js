@@ -65,12 +65,10 @@ router.post("/registration", function (req, res, next) {
     user.password = req.body.password;
     user.phone = req.body.phone;
 
-    //url of the page before registration
-    var referer=req.body.referer;
+
 
     userService.createUser(user).then(function () {
-        res.redirect("registration-confirm?closeUrl="+referer);
-
+        res.redirect("registration-confirm");
     }, function (error) {
         next(error);
     });
@@ -82,12 +80,11 @@ router.post("/registration", function (req, res, next) {
  * show page when user register succeed
  */
 router.get("/registration-confirm", function (req, res, next) {
-    var closeUrl=req.query.closeUrl || "";
     res.render("shared/confirm/confirm",
         {   layout: 'layout/general',
             title:"Registration Confirmation",
-            message:"You account has been successfully created. Please login using your email.",
-            closeUrl:closeUrl});
+            message:"You account has been successfully created. Please login using your email."
+        });
 });
 
 /**
@@ -119,13 +116,9 @@ router.post("/profile", function(req,res,next) {
     user.password = req.body.password;
     user.phone = req.body.phone;
 
-    //return the page before edit profile
-    var referer=req.body.referer;
-
     userService.updateUser(user).then(function () {
         req.session.token= loginService.createToken(user);
-        var url=stringHelp.format("{0}?closeUrl={1}", "profile-confirm", referer);
-        res.redirect(url);
+        res.redirect("profile-confirm");
 
     }, function (error) {
         next(error);
@@ -136,12 +129,11 @@ router.post("/profile", function(req,res,next) {
  * show page when profile update succeed
  */
 router.get("/profile-confirm", function (req, res, next) {
-    var closeUrl=req.query.closeUrl || "";
     res.render("shared/confirm/confirm",
         {   layout: 'layout/general',
             title:"Update Profile Confirmation",
-            message:"You profile has been successfully updated.",
-            closeUrl:closeUrl});
+            message:"You profile has been successfully updated."
+        });
 });
 
 

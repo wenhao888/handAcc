@@ -45,12 +45,11 @@
 
         <div class="form-group">
             <div class="col-sm-8 col-sm-offset-4">
-                <button class="btn btn-sm btn-warning" ng-click="cancel()"> Cancel </button>
+                <a class="btn btn-sm btn-warning" href="javascript:window.history.back()"> Cancel </a>
                 <button type="submit" class="btn btn-sm btn-primary" ng-click="submit(contactForm.$valid, $event)"> Submit </button>
             </div>
         </div>
 
-        <input type="text" value="<%=referer%>" name="referer" style="display: none"/>
 
     </form>
 </div>
