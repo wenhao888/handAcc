@@ -21,10 +21,12 @@
     <script src="/vendor/slick-carousel/slick.min.js"></script>
     <script src="/vendor/angular-slick/dist/slick.min.js"></script>
     <script src="/javascripts/home/home-page.js"></script>
+
+
+    <script src="/vendor/ng-module/ng-module.js"></script>
 </head>
 
-<body ng-app="home" ng-controller="homeController"
-      ng-init="newProducts=<%=JSON.stringify(newProducts)%>">
+<body>
 
 <%-include ../partial/svg.ejs%>
 
@@ -82,7 +84,11 @@
     </div>
 </div>
 
-<div class="page-content" style="padding-bottom: 300px;">
+<div ng-module="home" ng-controller="homeController"
+     ng-init="newProducts=<%=JSON.stringify(newProducts)%>"
+     class="page-content" style="padding-bottom: 300px;">
+
+
     <div id="myCarousel">
         <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
             <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">

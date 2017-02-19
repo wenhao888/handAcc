@@ -22,6 +22,7 @@
     "angular-touch": "^1.6.0",
     "angular-slick": "^0.2.1",
     "angular-ui-select": "^0.19.6",
-    "ng-password-strength": "^0.2.1"
+    "ng-password-strength": "^0.2.1",
+    "ng-module": "^0.0.3"
   }
 }
