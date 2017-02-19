@@ -1,9 +1,7 @@
 var angular=require("angular");
 
-var headLine = angular.module("headLine", []);
+var headLine = angular.module("headLine", ['ngStorage']);
 
-headLine.controller("headLineController", ["$scope", function ($scope) {
-    $scope.identity= {
-    }
+headLine.controller("headLineController", ["$scope", "$sessionStorage",function ($scope,$sessionStorage) {
 }]);
 

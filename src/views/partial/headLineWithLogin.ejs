@@ -1,6 +1,10 @@
 <script src="/javascripts/partial/headLineWithLogin-page.js"></script>
+<script src="/vendor/ngstorage/ngStorage.min.js"></script>
 
-<div class="header-line" ng-module="headLine" ng-controller="headLineController">
+
+<div class="header-line" ng-module="headLine" ng-controller="headLineController"
+    ng-init="token=<%=JSON.stringify(token)%>">
+
     <div class="container">
         <div class="pull-left">
             <%-include social-list.ejs%>
@@ -14,7 +18,8 @@
                     </li>
                 <% } else{ %>
                     <li class="user-link-item">
-                      Hello,  <a href="/users/profile" style="margin-right:200px;"><%=token.firstName%></a>
+                      <span ng-bind="'Hello, '"></span>
+                        <a href="/users/profile" style="margin-right:200px;" ng-bind="token.firstName"></a>
                     </li>
 
                      <li class="user-link-item">
