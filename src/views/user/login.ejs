@@ -12,6 +12,10 @@
     <form class="form-horizontal login-form" ng-module="login" ng-controller="loginController"
         novalidate action="/users/login" method="post" name="loginForm" >
 
+        <!-- this is a workaround to make chrome not do autofill-->
+        <input style="display:none" type="email" name="fakedEmail"/>
+
+
         <div class="form-group">
            <label class="control-label col-sm-4">Email </label>
            <div class="col-sm-8">
