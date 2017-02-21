@@ -25,6 +25,7 @@
     "ng-password-strength": "^0.2.1",
     "ng-module": "^0.0.3",
     "ngstorage": "^0.3.11",
-    "angular-cookies": "^1.6.2"
+    "angular-cookies": "^1.6.2",
+    "autofill-event": "^1.0.0"
   }
 }
