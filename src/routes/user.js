@@ -16,12 +16,13 @@ router.get('/login', function (req, res, next) {
  * user login
  */
 router.post('/login', function (req, res, next) {
-    var email = req.body.email;
-    var password = req.body.password;
+    var credential = {
+        email: req.body.email,
+        password: req.body.password
+    };
 
-    loginService.login(email, password)
+    loginService.login(req, res, credential)
         .then(function (user) {
-            req.session.token= loginService.createToken(user);
             res.redirect("/products/list");
 
         }, function (error) {
@@ -38,11 +39,12 @@ router.get("/login-failure", function (req, res, end) {
 
 });
 
+
 /**
  * execute log off
  */
 router.get("/logoff", function (req, res, end) {
-    req.session.token= loginService.createToken({});
+    loginService.logoff(req, res);
     res.redirect("/");
 });
 
@@ -64,8 +66,6 @@ router.post("/registration", function (req, res, next) {
     user.lastName = req.body.lastName;
     user.password = req.body.password;
     user.phone = req.body.phone;
-
-
 
     userService.createUser(user).then(function () {
         res.redirect("registration-confirm");
@@ -117,7 +117,7 @@ router.post("/profile", function(req,res,next) {
     user.phone = req.body.phone;
 
     userService.updateUser(user).then(function () {
-        req.session.token= loginService.createToken(user);
+        loginService.updateToken(req, res, user);
         res.redirect("profile-confirm");
 
     }, function (error) {
@@ -135,6 +135,5 @@ router.get("/profile-confirm", function (req, res, next) {
             message:"You profile has been successfully updated."
         });
 });
-
 
 module.exports = router;

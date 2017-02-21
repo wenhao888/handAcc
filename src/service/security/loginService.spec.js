@@ -4,6 +4,7 @@ var ResourceNotFoundException = require("../../exception").ResourceNotFoundExcep
 var InvalidTokenException = require("../../exception").InvalidTokenException;
 
 var loginService= require("./loginService");
+var req= {session:{}}, res= {cookie:function(){}};
 
 describe("test loginService", function() {
     this.timeout(15000);
@@ -22,7 +23,7 @@ describe("test loginService", function() {
     });
 
     it("test login --- none exist email", function(done) {
-       loginService.login("notExist@gmail.com","P@ssword1")
+       loginService.login(req, res,{email:"notExist@gmail.com", password:"P@ssword1"})
            .then(function() {
            }, function(error) {
                assert.isTrue(error instanceof ResourceNotFoundException);
@@ -32,7 +33,7 @@ describe("test loginService", function() {
     });
 
     it("test login --- password did not match", function(done) {
-        loginService.login("wenhao.lin@gmail.com","wrong")
+        loginService.login(req, res, {email:"wenhao.lin@gmail.com", password:"wrong"})
             .then(function() {
             }, function(error) {
                 assert.isTrue(error instanceof InvalidTokenException);

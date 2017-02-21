@@ -1,26 +1,29 @@
+<script src="/vendor/angular-cookies/angular-cookies.min.js"></script>
 <script src="/javascripts/partial/headLineWithLogin-page.js"></script>
 
+
 <div class="header-line" ng-module="headLine" ng-controller="headLineController">
+
     <div class="container">
         <div class="pull-left">
-            <%-include social-list.ejs%>
+            <%- include social-list.ejs %>
         </div>
         <div class="pull-right">
             <ul class="user-link-list">
 
-                <% if(!token.firstName){ %>
-                    <li class="user-link-item">
-                        <a href="/users/login"> login </a>
-                    </li>
-                <% } else{ %>
-                    <li class="user-link-item">
-                      Hello,  <a href="/users/profile" style="margin-right:200px;"><%=token.firstName%></a>
-                    </li>
+                <li class="user-link-item" ng-if="!token.id">
+                    <a href="/users/login" ng-bind=" 'Login' "> </a>
+                </li>
 
-                     <li class="user-link-item">
-                        <a href="/users/logoff">Logoff</a>
-                    </li>
-                <% } %>
+                <li class="user-link-item" ng-if="token.id">
+                    <span ng-bind="'Hello, '"></span>
+                    <a href="/users/profile" style="margin-right:200px;" ng-bind="token.firstName"></a>
+                </li>
+
+                <li class="user-link-item" ng-if="token.id">
+                    <a href="/users/logoff">Logoff</a>
+                </li>
+
 
                 <li class="user-link-item">
                     <a href="/users/registration"> register </a>
@@ -31,10 +34,10 @@
                 </li>
 
                 <% if(!isRoot){ %>
-                    <li class="user-link-item">
-                        <a class="icon icon-home"  href="/">
-                        </a>
-                    </li>
+                <li class="user-link-item">
+                    <a class="icon icon-home" href="/">
+                    </a>
+                </li>
                 <% } %>
 
             </ul>
