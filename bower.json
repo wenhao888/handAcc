@@ -24,6 +24,7 @@
     "angular-ui-select": "^0.19.6",
     "ng-password-strength": "^0.2.1",
     "ng-module": "^0.0.3",
-    "ngstorage": "^0.3.11"
+    "ngstorage": "^0.3.11",
+    "angular-cookies": "^1.6.2"
   }
 }

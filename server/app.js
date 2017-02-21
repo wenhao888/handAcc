@@ -30,7 +30,7 @@ app.use(favicon(path.join(__dirname, '../public/images', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 300000}, resave: true, saveUninitialized: true }))
+app.use(session({ secret: 'keyboard cat', cookie: {}, resave: true, saveUninitialized: true }))
 
 app.use(express.static(path.join(__dirname, '/../public')));
 logService.initialize(app);
