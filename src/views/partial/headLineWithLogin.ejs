@@ -44,3 +44,8 @@
         </div>
     </div>
 </div>
+
+<script>
+    //workaround for firefox, safari to execute js file when page is loaded from fb-cache
+    window.onunload = function(){};
+</script>
