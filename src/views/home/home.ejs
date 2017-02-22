@@ -141,7 +141,7 @@
 
 
 
-<div class="page-footer">
+<div class="page-footer" ng-module="home" ng-controller="footerController">
     <div class="footer-info">
         <div class="container">
             <div class="row">
@@ -186,9 +186,9 @@
             <div class="row">
                 <div class="col-sm-7">
                     <form>
-                        <label> SIGN UP FOR NEWSLETTER </label>
-                        <input type="email" class="input--wd" placeholder="your email address"/>
-                        <button class="btn">SUBSCRIBE</button>
+                        <label> SIGN UP FOR NEWSLETTER</label>
+                        <input type="email" class="input--wd" placeholder="your email address" ng-model="email"/>
+                        <button class="btn" ng-click="subscribe()">SUBSCRIBE</button>
                     </form>
                 </div>
                 <div class="col-sm-5" style="text-align: right">

@@ -8,5 +8,8 @@ router.get('/', function(req, res, next) {
     res.render('home/home', { title: 'Express', layout:false, newProducts: newProducts});
 });
 
+router.get('/subscribe',function (req,res,next) {
+    res.render('email/subscribe', {layout:'layout/general'});
+});
 
 module.exports = router;
