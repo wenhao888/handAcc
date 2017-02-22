@@ -10,14 +10,14 @@
    </h3>
 
     <form class="form-horizontal login-form" ng-module="login" ng-controller="loginController"
-        novalidate action="/users/login" method="post" name="loginForm" autocomplete="off">
+        novalidate action="/users/login" method="post" name="loginForm" >
 
 
         <div class="form-group">
            <label class="control-label col-sm-4">Email </label>
            <div class="col-sm-8">
                <input type="email" class="form-control" name="email" ng-model="email"
-                      required ng-model-options="{updateOn:'blur'}" autocomplete="off"/>
+                      required ng-model-options="{updateOn:'blur'}" />
 
                <p class="input-error" ng-show=" loginForm.email.$error.required && submitted" ng-bind="'required'">
                </p>
