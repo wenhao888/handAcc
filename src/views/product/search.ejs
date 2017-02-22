@@ -7,15 +7,16 @@
 <script src="/javascripts/product/search-page.js"></script>
 
 <div class="container" ng-module="search" ng-controller="searchController"
-     ng-init="condition=<%=JSON.stringify(condition)%>; ">
-    <h3 class="page-title" style="margin-bottom: -20px;" >
+     ng-init="condition=<%= JSON.stringify(condition) %>; keyword=<%=JSON.stringify(condition.keyword)%>">
+    <h3 class="page-title" style="margin-bottom: -20px;">
         Search results
     </h3>
 
     <div style="text-align: right" class="header-search-form-wrapper">
         <form class="header-search-form" action="/products/search" method="get">
             <div style="display: inline-block" class="input-group">
-                <input type="text" style="display: block" name="keyword" ng-model="condition.keyword" placeholder="search ..."> </input>
+                <input type="text" style="display: block" name="keyword" ng-model="condition.keyword"
+                       placeholder="search ..."> </input>
                 <span class="input-group__bar"></span>
             </div>
 
@@ -25,6 +26,7 @@
         </form>
     </div>
 
+    <% if(condition.products.length) { %>
     <div>
         <div class="product-wrapper" ng-repeat="p in condition.products">
             <div class="product-image-wrapper">
@@ -69,13 +71,16 @@
                     </a>
                 </div>
 
-
             </div>
         </div>
-
-
-
     </div>
+    <% } else{ %>
+    <div>
+        <div class="product-nosearch-result-wrapper">
+            Your search "{{keyword}}" did not match any products.
+        </div>
+    </div>
+    <% } %>
 
 </div>
 
