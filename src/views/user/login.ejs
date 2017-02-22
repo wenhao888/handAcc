@@ -29,6 +29,7 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Password </label>
             <div class="col-sm-8">
+                <!-- force to use new-password as a workaround: angular will not update ng-model when email is autofilled by the password-->
                 <input type="password" class="form-control" name="password" ng-model="password"   autocomplete="new-password" required>
                 <p class="input-error" ng-show="loginForm.password.$error.required && submitted" ng-bind="'required'">
                 </p>
