@@ -17,7 +17,7 @@
            <label class="control-label col-sm-4">Email </label>
            <div class="col-sm-8">
                <input type="email" class="form-control" name="email" ng-model="email"
-                      required ng-model-options="{updateOn:'blur'}" autocomplete="new-password"/>
+                      required ng-model-options="{updateOn:'blur'}" autocomplete="off"/>
 
                <p class="input-error" ng-show=" loginForm.email.$error.required && submitted" ng-bind="'required'">
                </p>
@@ -29,7 +29,7 @@
         <div class="form-group">
             <label class="control-label col-sm-4"> Password </label>
             <div class="col-sm-8">
-                <input type="password" class="form-control" name="password" ng-model="password"  required>
+                <input type="password" class="form-control" name="password" ng-model="password"   autocomplete="new-password" required>
                 <p class="input-error" ng-show="loginForm.password.$error.required && submitted" ng-bind="'required'">
                 </p>
             </div>
