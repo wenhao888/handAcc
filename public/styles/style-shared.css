@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,7 +9,26 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     line-height: 1.4em;
-    position:relative
+    position:relative;
+    min-height: 100%;
+}
+
+
+.header {
+    background-color: transparent;
+    color: #212121;
+}
+
+.page-content {
+
+}
+
+.page-footer {
+    padding-bottom: 20px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
 }
 
 .container {
@@ -23,10 +46,7 @@ body {
 style for header. we assume the header has two part: header-line and menu bar.
 the menu bar has a left part and a right part
 **/
-.header {
-    background-color: transparent;
-    color: #212121;
-}
+
 
 .header-line {
     position: relative;
@@ -283,13 +303,7 @@ the menu bar has a left part and a right part
 
 
 
-.page-footer {
-    padding-bottom: 20px;
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-}
+
 
 .footer-subscribe {
     background-color: #2b383e;
