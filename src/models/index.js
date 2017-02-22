@@ -28,6 +28,7 @@ var sequelize  = new Sequelize(dbUrl, {
 module.exports = {
     sequelize: sequelize,
     Role: require("./Role").defineModel(sequelize),
-    User: require("./User").defineModel(sequelize)
+    User: require("./User").defineModel(sequelize),
+    Subscribe: require("./Subscribe").defineModel(sequelize),
 };
 
