@@ -9,7 +9,7 @@ class httpForwarder {
     start(port) {
         this.forwarder = http.createServer(function(req,res) {
             var host= req.headers.host.split(":")[0];
-            var url =  'https://' + host + ":443" + req.url;
+            var url =  'https://' + host + ":3443" + req.url;
 
             res.writeHead(302, {
                 'Location': url

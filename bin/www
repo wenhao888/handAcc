@@ -17,7 +17,7 @@ var HttpForwarder =   require("../server/forwarder/HttpForwarder");
  */
 
 var port = normalizePort(process.env.PORT || '3000');
-app.set('port', 443);
+app.set('port', 3443);
 
 /**
  * Create HTTP server.
@@ -32,7 +32,7 @@ var server=https.createServer(sslOptions, app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(443);
+server.listen(3443);
 server.on('error', onError);
 server.on('listening', onListening);
 
