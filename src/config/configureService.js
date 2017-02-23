@@ -1,3 +1,5 @@
+var fs= require("fs");
+
 var email = {
     "systemEmailAccount": process.env['systemEmailAccount'],
     "systemEmailAccountPwd": process.env["systemEmailAccountPwd"],
@@ -19,8 +21,15 @@ var db = {
 };
 
 
+var ssl = {
+    key: fs.readFileSync('./src/ssl/key.pem'),
+    cert: fs.readFileSync('./src/ssl/cert.pem'),
+    passphrase:'lwh396505'
+};
+
 module.exports = {
     'email': email,
     'elastic': elastic,
-    db: db
+    'db': db,
+    'ssl':ssl
 };
