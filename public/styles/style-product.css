@@ -1,4 +1,10 @@
 
+.product-nosearch-result-wrapper {
+    margin: 30px 0;
+    font-size: 1.3em;
+    font-weight: lighter;
+}
+
 .product-wrapper {
     margin: 30px 0;
     border-top: 1px solid #dfdfdf;
