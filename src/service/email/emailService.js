@@ -46,8 +46,28 @@ function sendProductIssueEmail(request) {
     });
 }
 
+function sendSubscribeEmail(email) {
+    singleton.app.mailer.send(
+        {
+            template: 'email/subscribeEmailTemplate', // REQUIRED
+        },
+        {
+            to: email,
+            subject: 'Test Email',
+        },
+        function (err) {
+            if (err) {
+                console.log(err);
+                return;
+            };
+            console.log("email send success");
+        }
+    );
+}
+
 module.exports= {
     initialize: initialize,
     sendContactUsEmail: sendContactUsEmail,
-    sendProductIssueEmail: sendProductIssueEmail
+    sendProductIssueEmail: sendProductIssueEmail,
+    sendSubscribeEmail:sendSubscribeEmail
 };
