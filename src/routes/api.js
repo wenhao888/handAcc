@@ -29,7 +29,7 @@ router.post("/users/email/_search", function(req, res, next) {
 router.post('/subscribe',function (req,res,next) {
     var email = req.body.email;
     subscribeService.subscribeEmail(email).then(function (data) {
-        res.send("success");
+        res.redirect("/subscribe");
     },function (err) {
         res.send(err);
     });
@@ -38,15 +38,34 @@ router.post('/subscribe',function (req,res,next) {
 router.get('/unsubscribe/:email',function (req,res,next) {
    var email = req.params.email;
    subscribeService.unSubscribe(email).then(function (data) {
-       res.send(data);
+       res.render('subscribe/unsubscribe', {layout:'layout/general'});
    },function (err) {
        res.send(err);
    });
 });
 
-router.get('/email',function (req,res,next) {
-    var email = req.body.email;
-    emailService.sendSubscribeEmail(email);
+router.post('/sendSubscribeEmail',function (req,res,next) {
+    subscribeService.getAllUser().then(function (users) {
+        req.users = users;
+        return next();
+    },function (err) {
+        res.send(err);
+    });
+    // var message = req.body.message;
+    // emailService.sendSubscribeEmail(email);
+},function (req,res,next) {
+    var users = req.users;
+    console.log(users.length);
+    for(var i=0;i<users.length;i++){
+        emailService.sendSubscribeEmail(users[i].dataValues.email);
+    }
+    return next();
+},function (req,res,next) {
+    res.send('successful send email');
+});
+
+router.get('/getAllSubscribeUser',function (req,res,next) {
+
 });
 
 module.exports = router;

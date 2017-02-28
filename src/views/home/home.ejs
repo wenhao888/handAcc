@@ -185,10 +185,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-7">
-                    <form>
+                    <form method="post" action="/api/subscribe">
                         <label> SIGN UP FOR NEWSLETTER</label>
-                        <input type="email" class="input--wd" placeholder="your email address" ng-model="email"/>
-                        <button class="btn" ng-click="subscribe()">SUBSCRIBE</button>
+                        <input type="email" class="input--wd" placeholder="your email address" name="email"/>
+                        <input class="btn" type="submit" name="submit" value="SUBSCRIBE">
+                        <!--<button class="btn" ng-click="subscribe()">SUBSCRIBE</button>-->
                     </form>
                 </div>
                 <div class="col-sm-5" style="text-align: right">

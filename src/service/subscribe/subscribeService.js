@@ -4,6 +4,7 @@ var Subscribe = models.Subscribe;
 var subscribeService = {
     subscribeEmail:subscribeEmail,
     unSubscribe:unSubscribe,
+    getAllUser:getAllUser,
 }
 function subscribeEmail(email) {
     return new Promise(function(resolve, reject){
@@ -32,6 +33,16 @@ function unSubscribe(email) {
             resolve(data);
         },function (err) {
             reject(err);
+        })
+    })
+}
+
+function getAllUser() {
+    return new Promise(function (resolve, reject) {
+        Subscribe.findAll({where:{active:true}}).then(function (users) {
+            resolve(users);
+        },function (error) {
+            reject(error);
         })
     })
 }

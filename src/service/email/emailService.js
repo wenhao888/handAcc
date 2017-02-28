@@ -49,7 +49,7 @@ function sendProductIssueEmail(request) {
 function sendSubscribeEmail(email) {
     singleton.app.mailer.send(
         {
-            template: 'email/subscribeEmail', // REQUIRED
+            template: 'email/subscribeEmailTemplate', // REQUIRED
         },
         {
             to: email,
@@ -60,7 +60,7 @@ function sendSubscribeEmail(email) {
                 console.log(err);
                 return;
             };
-            res.send("success");
+            console.log("email send success");
         }
     );
 }

@@ -1,0 +1,40 @@
+<%-contentFor("content")%>
+
+    <style type="text/css">
+        .field:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+        .label {
+            width:100px;
+        }
+
+    </style>
+
+
+<div style="width: 500px; margin:20px auto" ng-app="subscribeEmail" ng-controller="subscribeEmailCtrl">
+    <h3>
+        New subscribe Message
+    </h3>
+<form method="post" action="/api/sendSubscribeEmail">
+    <div class="field">
+        <label>To: </label>
+        <span style="font-weight: lighter">
+            ALL
+        </span>
+    </div>
+
+    <div class="field">
+        <label class="label">Contact: </label>
+        <span style="font-weight: lighter"></span>
+    </div>
+
+    <div class="field">
+        <label style="display: block">Message:</label>
+        <textarea rows="4" cols="50" name="message">
+        </textarea>
+    </div>
+    <input type="submit" name="submit" value="submit" class="btn btn-primary pull-right"/>
+</form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.2/angular-resource.min.js"></script>
+<script src="/javascripts/subscribe/subscribe-page.js"></script>
