@@ -15,13 +15,10 @@ home.controller("homeController", ["$scope", function($scope) {
             src:"/images/coverImage_1.jpg"
         },
         {   id: 1,
-            src:"/images/image1.jpg"
+            src:"/images/22.jpg"
         },
         {   id: 2,
-            src:"/images/image3.jpg"
-        },
-        {   id: 3,
-            src:"/images/image4.jpg"
+            src:"/images/33.jpg"
         }
     ];
     $scope.myInterval = 5000;
