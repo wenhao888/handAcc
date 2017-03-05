@@ -34,6 +34,8 @@
 
 .product-title {
     font-weight: bold;
+    height: 3em;
+    text-overflow: ellipsis;
 }
 
 .feature-list {
