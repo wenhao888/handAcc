@@ -45,12 +45,12 @@
     border-top-width: 2px;
     border-top-style: solid;
     width: 100%;
-    padding: 30px 30px 20px 30px;
+    padding: 30px 10px 20px 10px;
     border-radius: 0 0 5px 5px;
 }
 
 .product-preview:hover .product-preview__info {
-    padding: 50px 30px 40px 30px;
+    padding: 50px 10px 40px 10px;
 }
 
 .product-preview-wrapper:hover .product-preview-cart{
