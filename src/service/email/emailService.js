@@ -1,5 +1,6 @@
 var mailer = require('express-mailer');
 var emailConfigure= require("../../config/configureService").email;
+var logger=require("../logging/logService").getLogger("emailService");
 var singleton ={
     app: null
 };
@@ -29,7 +30,11 @@ function sendContactUsEmail(request) {
         layout: false,
         request:request
     }, function (err) {
-
+        if (err) {
+            logger.error(err);
+        } else {
+            logger.info("send contact us email successfully.")
+        }
     });
 }
 
@@ -42,7 +47,11 @@ function sendProductIssueEmail(request) {
         layout: false,
         request:request
     }, function (err) {
-
+        if(err) {
+            logger.error(err);
+        } else {
+            logger.info("send product issue email successfully.")
+        }
     });
 }
 
