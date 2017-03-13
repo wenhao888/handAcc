@@ -3,7 +3,7 @@ var fs= require("fs");
 var email = {
     "systemEmailAccount": process.env['systemEmailAccount'],
     "systemEmailAccountPwd": process.env["systemEmailAccountPwd"],
-    "host": "smtp.gmail.com",
+    "host": "smtp.exmail.qq.com",
     "port":  "465",
     "useTls": true,
     "protocol":"SMTP"
