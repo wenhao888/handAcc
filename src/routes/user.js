@@ -83,7 +83,8 @@ router.get("/registration-confirm", function (req, res, next) {
     res.render("shared/confirm/confirm",
         {   layout: 'layout/general',
             title:"Registration Confirmation",
-            message:"You account has been successfully created. Please login using your email."
+            message:"You account has been successfully created. Please login using your email.",
+            closeUrl:"/"
         });
 });
 
