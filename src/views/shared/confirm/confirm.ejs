@@ -2,6 +2,12 @@
 <script src="/javascripts/shared/confirm/confirm-page.js"></script>
 
 
+<%
+if (typeof closeUrl == 'undefined') {
+    var closeUrl ="javascript:window.history.go(-2)"
+}
+%>
+
 <div class="container" style="width:500px;" ng-module="confirm" ng-controller="confirmController">
     <h3 class="page-title text-success">
         <%=title%>
@@ -13,7 +19,7 @@
 
     <div class="form-group">
         <div class="col-md-offset-2">
-            <a class="btn btn-sm btn-success" href="javascript:window.history.go(-2) %>"> Close </a>
+            <a class="btn btn-sm btn-success" href="<%-closeUrl%>"> Close </a>
         </div>
     </div>
 </div>
